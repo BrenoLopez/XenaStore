@@ -7,13 +7,14 @@ Class MenuRodape
     private $canecas;
     private $posters;
     private $acessorios;
-
+    private $fixo;
+    //classe que define o codigo do menu em qualquer página
     function menu()
     {
         ?>
         <!-- Barra de navegação colocar como metodo de classe php-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand " href="index.php"><img src="">Logo</a>
+            <a class="navbar-brand " href="../../../XenaStore/Cliente/index.php"><img src="">Logo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -21,14 +22,15 @@ Class MenuRodape
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
                     <li class="nav-item <?= $this->getCamisas(); ?>">
-                        <a class="nav-link " href="#">Camisas</a>
+                    <a class="nav-link " href="../../../XenaStore/Cliente/views/Camisas.php">Camisas</a>
                     </li>
                     <li class="nav-item <?= $this->getMoletons(); ?>">
                         <a class="nav-link" href="#">Moletons</a>
                     </li>
                     <li class="nav-item <?= $this->getCanecas(); ?>">
-                        <a class="nav-link " href="#">Canecas</a>
+                        <a class="nav-link " href="views/Canecas.php">Canecas</a>
                     </li>
                     <li class="nav-item <?= $this->getPosters(); ?>">
                         <a class="nav-link " href="#">Posters</a>
@@ -36,6 +38,7 @@ Class MenuRodape
                     <li class="nav-item <?= $this->getAcessorios(); ?>">
                         <a class="nav-link " href="#">Acessórios</a>
                     </li>
+
                 </ul>
 
                 <form class="form-inline my-2 my-lg-0 ml-2" method="post">
@@ -62,7 +65,7 @@ Class MenuRodape
 ?>
 
         <!-- Footer -->
-        <footer class="py-5 bg-dark">
+        <footer class="py-5 bg-dark <?= $this->getFixo();?>">
             <div class="container">
                 <p class="m-0 text-center text-white">Copyright &copy; XenaStore 2018</p>
             </div>
@@ -70,8 +73,8 @@ Class MenuRodape
         </footer>
 
         <!-- Bootstrap core JavaScript -->
-        <script src="vendor/jquery/jquery.min.js"></script>
-        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../vendor/jquery/jquery.min.js"></script>
+        <script src="../vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 <?php
 
     }
@@ -143,15 +146,28 @@ Class MenuRodape
 
     /**
      * @param mixed $acessorios
+     * @return MenuRodape
      */
-    public function setAcessorios($acessorios): void
+    public function setAcessorios($acessorios)
     {
         $this->acessorios = $acessorios;
+        return $this;
     }
 
     public function getAcessorios()
     {
         return $this->acessorios;
+    }
+
+    public function setFixo($fixo)
+    {
+        $this->fixo = $fixo;
+        return $this;
+    }
+
+    public function getFixo()
+    {
+        return $this->fixo;
     }
 
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
   <head>
 
@@ -15,21 +15,16 @@
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="vendor/bootstrap/js/bootstrap.min.js">
   </head>
 
   <body>
 
 <?php
-require_once 'MenuRodape.php';
+require_once 'controllers/MenuRodape.php';
 
 $MenuRodape  = new MenuRodape();
-$MenuRodape->setCamisas("active");
 $MenuRodape->menu();
-
-
-
-
 ?>
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
