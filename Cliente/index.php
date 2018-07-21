@@ -20,48 +20,17 @@
 
   <body>
 
-    <!-- Barra de navegação colocar como metodo de classe php-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <a class="navbar-brand" href="#"><img src="">Logo</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+<?php
+require_once 'MenuRodape.php';
 
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Camisas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Moletons</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Canecas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Posters</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link " href="#">Acessórios</a>
-          </li>
-        </ul>
-
-        <form class="form-inline my-2 my-lg-0 ml-2" method="post">
-          <input class="form-control mr-sm-2" type="search" placeholder="Faça sua busca aqui">
-          <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
+$MenuRodape  = new MenuRodape();
+$MenuRodape->setCamisas("active");
+$MenuRodape->menu();
 
 
-        <a href="">
-          <button class="btn btn-outline-light ml-2 ">Cadastrar/Login</button>
-        </a>
-        <a href="">
-          <button class="btn btn-outline-light ml-2 ">Carrinho</button>
-        </a>
 
-      </div>
-      </nav>
 
+?>
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -126,17 +95,10 @@
     </div>
     <!-- /.container -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; XenaStore 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
+<?php
+$MenuRodape->Rodape();
+?>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
 
