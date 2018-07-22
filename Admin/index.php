@@ -85,10 +85,10 @@
 
           <ul class="sidenav-second-level collapse" id="collapseMulti">
             <li>
-              <a href="#" id="cadastro_user">Clientes</a>
+              <a href="views/user/cliente.php" id="cadastro_user">Clientes</a>
             </li>
             <li>
-              <a href="#">Funcionários</a>
+              <a href="views/user/func.php">Funcionários</a>
             </li>
 
           </ul>
