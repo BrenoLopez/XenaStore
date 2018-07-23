@@ -22,18 +22,14 @@
 
     <?php
     require_once '../controllers/MenuRodape.php';
-
+    require_once '../controllers/BarraLateral.php';
     $MenuRodape  = new MenuRodape();
     $MenuRodape->setCamisas("active");
     $MenuRodape->menu();
-
+    $BarraLateral = new BarraLateral();
+    $BarraLateral->filtroCategorias();
     ?>
-    <div class="container">
-    <div class="col">
-    
 
-    </div>
-    </div>
 
    <div class="container">
     <!-- Lista de alguns produtos randomicos do banco de dados -->
