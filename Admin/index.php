@@ -64,7 +64,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="login.html">Todos os Produtos</a>
+              <a href="views/estoque/home_estoque.php"> Produtos</a>
             </li>
             <li>
               <a href="register.html">Produtos Esgotados</a>

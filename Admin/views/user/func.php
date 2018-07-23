@@ -64,7 +64,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="login.html">Todos os Produtos</a>
+              <a href="../estoque/home_estoque.php">Produtos</a>
             </li>
             <li>
               <a href="register.html">Produtos Esgotados</a>
@@ -158,7 +158,7 @@
 
        <div class="col-xl-5 col-sm-6 mb-3">
         <div class="card text-white bg-warning o-hidden h-100">
-           <a class="card-footer text-white clearfix small z-1" href="#">
+           <a class="card-footer text-white clearfix small z-1" href="listar_func.php">
           <div class="card-body">
             <div class="card-body-icon">
               <i class="fa fa-fw fa-list"></i>
@@ -196,7 +196,7 @@
             <div class="modal-body">Realmente deseja sair?</div>
             <div class="modal-footer" id="sair">
               <button  class="btn btn-secondary" type="button"  data-dismiss="modal">Cancel</button>
-              <a class="btn btn-primary" href="../auth/login.html">Sair</a>
+              <a class="btn btn-primary" href="../../../auth/login.html">Sair</a>
             </div>
           </div>
         </div>

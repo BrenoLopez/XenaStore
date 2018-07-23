@@ -18,7 +18,7 @@
   <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="../../css/sb-admin.css" rel="stylesheet">
-
+   <?php  require "../../../motor/requeridos.php" ?>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -64,7 +64,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="../estoque/home_estoque.php"> Produtos</a>
+              <a href="home_estoque.php">Produtos</a>
             </li>
             <li>
               <a href="register.html">Produtos Esgotados</a>
@@ -85,10 +85,10 @@
 
           <ul class="sidenav-second-level collapse" id="collapseMulti">
             <li>
-              <a href="cliente.php" id="cadastro_user">Clientes</a>
+              <a href="../user/cliente.php" id="cadastro_user">Clientes</a>
             </li>
             <li>
-              <a href="func.php">Funcionários</a>
+              <a href="../user/func.php">Funcionários</a>
             </li>
 
           </ul>
@@ -115,52 +115,66 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="func.php">Funcionarios</a>
+            <a href="home_estoque.php">Estoque</a>
           </li>
-          <li class="breadcrumb-item active"> Cadastro</li>
+          <li class="breadcrumb-item active"> Editar</li>
         </ol>
+
+      <?php 
+
+   $prod= new Produto();
+   $prod= $prod->read($_GET['id']);
+   ?>
+
 
         <!-- Form add func-->
         <div class="container">
           <div class="card  mx-auto mt-5">
-            <div class="card-header">Cadastrar conta</div>
+            <div class="card-header">Cadastrar Produto</div>
             <div class="card-body">
-              <form action="../../../motor/controller/user.php" id="target" method="Post">
+              <form action="../../../motor/controller/produto.php" id="target" method="Post" enctype = "multipart/form-data">
                 <div class="form-group">
                   <div class="form-row">
                     <div class="col-md-6">
-                      <label for="exampleInputName">Primeiro Nome</label>
-                      <input class="form-control" id="first_name"  name="first_name" type="text" aria-describedby="nameHelp" placeholder="Primeiro Nome">
+                      <label for="exampleInputName">Nome Produto</label>
+                      <input class="form-control" id="name_product"  name="name_product" type="text" aria-describedby="nameHelp" value="<?php echo $prod['name_product']; ?>">
                     </div>
                     <div class="col-md-6">
-                      <label for="exampleInputLastName">Sobrenome</label>
-                      <input class="form-control" id="last_name" name="last_name" type="text" aria-describedby="nameHelp" placeholder="Sobrenome">
+                      <label for="exampleInputLastName">Categoria</label>
+                      <input class="form-control" id="category" name="category" type="text" aria-describedby="nameHelp"  value="<?php echo $prod['category']; ?>">
                     </div>
                   </div>
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Email </label>
-                  <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="Digite seu email">
-                </div>
-
+                <br>
+                <div class="form-row">
+                    <div class="col-md-6">
+                      <label for="exampleInputName">Quantidade</label>
+                      <input class="form-control" id="quantidade"  name="quantidade" type="number" aria-describedby="nameHelp" value="<?php echo $prod['quantidade']; ?>">
+                    </div>
+                    <div class="col-md-6">
+                      <label for="exampleInputLastName">Valor</label>
+                      <input class="form-control" id="valor" name="valor" type="number" aria-describedby="nameHelp" value="<?php echo $prod['valor']; ?>">
+                    </div>
+                  </div>
+                <br>
                 <div class="form-group">
                   <div class="form-row">
                     <div class="col-md-6">
-                      <label for="exampleInputName">CPF</label>
-                      <input class="form-control" id="cpf" name="cpf" type="number" aria-describedby="nameHelp" placeholder="000.000.000.00">
+                      <label for="exampleInputName">Descrição</label>
+                      <input class="form-control" id="descricao" name="descricao" type="text" aria-describedby="nameHelp" value="<?php echo $prod['descricao']; ?>">
                     </div>
                     <div class="col-md-6">
-                      <label for="exampleInputLastName">Senha</label>
-                      <input class="form-control" id="password" type="password" name="password" aria-describedby="nameHelp" placeholder="Digite sua senha">
+                      <label for="exampleInputLastName">Imagem Do Produto</label>
+                      <input class="form-control" id="imagem" type="file" name="imagem" value="value="<?php echo $prod['imagem']; ?>"">
                     </div>
-                    <input type="hidden" name="telefone" value="-">
-                    <input type="hidden" name="endereco" value="-">
-                    <input type="hidden" name="cep" value="-">
-                    <input type="hidden" name="tipo" value="1">
-                    <input type="hidden" name="action" value="create">
+ 
                   </div>
                 </div>
-                <button  type="submit" class="btn btn-success btn-block" id="cadastrar"> Cadastrar  </button> 
+                <!-- ação a ser executada no controller -->
+                <input type="hidden" name="action" value="update">
+                <input type="hidden" name="id_product" value="<?php echo $_GET['id']; ?>">
+                <br>
+                <button  type="submit" class="btn btn-success btn-block" id="cadastrar"> Salvar  </button> 
               </form>
             </div>
           </div>
@@ -224,14 +238,15 @@
 
      $('#cadastrar').click(function(e) {
       e.preventDefault();
-      
-      var first_name= $('#first_name').val();
-      var last_name= $('#last_name').val();
-      var cpf= $('#cpf').val();
-      var email= $('#email').val();
-      var password= $('#password').val();
 
-      if(!first_name || !last_name || !cpf || !email || !password){
+      var name_product= $('#name_product').val();
+      var category= $('#category').val();
+      var quantidade= $('#quantidade').val();
+      var valor= $('#valor').val();
+      var descricao= $('#descricao').val();
+      var imagem= $('#imagem').val();
+
+      if(!name_product || !category || !quantidade || !valor || !descricao || !imagem){
         return alert("todos os campos devem ser preenchidos!!")
       }else {
           //enviando formulario 

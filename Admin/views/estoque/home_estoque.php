@@ -64,7 +64,7 @@
           </a>
           <ul class="sidenav-second-level collapse" id="collapseExamplePages">
             <li>
-              <a href="../estoque/home_estoque.php">Produtos</a>
+              <a href="home_estoque.php">Produtos</a>
             </li>
             <li>
               <a href="register.html">Produtos Esgotados</a>
@@ -85,10 +85,10 @@
 
           <ul class="sidenav-second-level collapse" id="collapseMulti">
             <li>
-              <a href="cliente.php" id="cadastro_user">Clientes</a>
+              <a href="../user/cliente.php" id="cadastro_user">Clientes</a>
             </li>
             <li>
-              <a href="func.php">Funcionários</a>
+              <a href="../user/func.php">Funcionários</a>
             </li>
 
           </ul>
@@ -115,42 +115,24 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#">Clientes</a>
+            <a href="#">Estoque</a>
           </li>
           <li class="breadcrumb-item active"></li>
         </ol>
-        <!-- search -->
-        <div class="row">
-         <div class="col-sm-8"></div>
-         <div class="col-sm-4">
-          <ul>
-           <li>
-            <form class="form-inline my-2 my-lg-0 mr-lg-2">
-              <div class="input-group">
-                <input class="form-control" type="text" placeholder="Search for...">
-                <span class="input-group-append">
-                  <button class="btn btn-primary" type="button">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </span>
-              </div>
-            </form>
-          </li>
-        </ul>
-      </div>
-    </div> 
+       
+       <br><br><br> 
     <!-- Icon Cards-->
     <br><br><br>
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-xl-5 col-sm-6 mb-3">
         <div class="card text-white bg-primary o-hidden h-100">
-           <a class="card-footer text-white clearfix small z-1" href="#">
+           <a class="card-footer text-white clearfix small z-1" href="add_produtos.php">
           <div class="card-body">
             <div class="card-body-icon">
-              <i class="fa fa-fw fa-user"></i>
+              <i class="fa fa-fw  fa-cart-plus"></i>
             </div>
-           <h3> <div class="mr-5">Cadastrar Clientes(NÃO VAI TER ESSA OPACAO)</div> </h3>
+           <h3> <div class="mr-5">Cadastrar Produtos</div> </h3>
           </div>
           </a>
         </div>
@@ -158,12 +140,12 @@
 
        <div class="col-xl-5 col-sm-6 mb-3">
         <div class="card text-white bg-warning o-hidden h-100">
-           <a class="card-footer text-white clearfix small z-1" href="#">
+           <a class="card-footer text-white clearfix small z-1" href="listar_produtos.php">
           <div class="card-body">
             <div class="card-body-icon">
-              <i class="fa fa-fw fa-list"></i>
+              <i class="fa fa-fw fa-th-list"></i>
             </div>
-           <h3> <div class="mr-5">Listar Clientes</div> </h3>
+           <h3> <div class="mr-5">Listar Produtos</div> </h3>
           </div>
           </a>
         </div>

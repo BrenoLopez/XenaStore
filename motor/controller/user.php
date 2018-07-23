@@ -55,8 +55,8 @@
 			else {
 				$res = 'false';	
 			}
-			echo $res;
-			
+			// echo $res;
+		header("location: ../../admin/views/user/func.php");
 		
 		break;	
 		

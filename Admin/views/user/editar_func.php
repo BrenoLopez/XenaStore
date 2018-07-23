@@ -18,7 +18,7 @@
   <link href="../../vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
   <!-- Custom styles for this template-->
   <link href="../../css/sb-admin.css" rel="stylesheet">
-
+  <?php  require "../../../motor/requeridos.php" ?>
 </head>
 
 <body class="fixed-nav sticky-footer bg-dark" id="page-top">
@@ -117,8 +117,15 @@
           <li class="breadcrumb-item">
             <a href="func.php">Funcionarios</a>
           </li>
-          <li class="breadcrumb-item active"> Cadastro</li>
+          <li class="breadcrumb-item active"> Editar</li>
         </ol>
+
+   <?php 
+
+   $user= new User();
+   $user= $user->read($_GET['id']);
+   ?>
+
 
         <!-- Form add func-->
         <div class="container">
@@ -130,24 +137,24 @@
                   <div class="form-row">
                     <div class="col-md-6">
                       <label for="exampleInputName">Primeiro Nome</label>
-                      <input class="form-control" id="first_name"  name="first_name" type="text" aria-describedby="nameHelp" placeholder="Primeiro Nome">
+                      <input class="form-control" id="first_name"  name="first_name" type="text" aria-describedby="nameHelp" placeholder="Primeiro Nome" value="<?php  echo $user['first_name']?>">
                     </div>
                     <div class="col-md-6">
                       <label for="exampleInputLastName">Sobrenome</label>
-                      <input class="form-control" id="last_name" name="last_name" type="text" aria-describedby="nameHelp" placeholder="Sobrenome">
+                      <input class="form-control" id="last_name" name="last_name" type="text" aria-describedby="nameHelp" placeholder="Sobrenome" value="<?php  echo $user['last_name']?>">
                     </div>
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Email </label>
-                  <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="Digite seu email">
+                  <input class="form-control" id="email" name="email" type="email" aria-describedby="emailHelp" placeholder="Digite seu email" value="<?php  echo $user['email']?>">
                 </div>
 
                 <div class="form-group">
                   <div class="form-row">
                     <div class="col-md-6">
                       <label for="exampleInputName">CPF</label>
-                      <input class="form-control" id="cpf" name="cpf" type="number" aria-describedby="nameHelp" placeholder="000.000.000.00">
+                      <input class="form-control" id="cpf" name="cpf" type="number" aria-describedby="nameHelp" placeholder="000.000.000.00" value="<?php  echo $user['cpf']?>">
                     </div>
                     <div class="col-md-6">
                       <label for="exampleInputLastName">Senha</label>
@@ -157,10 +164,12 @@
                     <input type="hidden" name="endereco" value="-">
                     <input type="hidden" name="cep" value="-">
                     <input type="hidden" name="tipo" value="1">
-                    <input type="hidden" name="action" value="create">
+                    <input type="hidden" name="action" value="update">
+                    <input type="hidden" name="id_user" value="<?php  echo $_GET['id']; ?>">
                   </div>
                 </div>
-                <button  type="submit" class="btn btn-success btn-block" id="cadastrar"> Cadastrar  </button> 
+                <button  type="submit" class="btn btn-success btn-block" id="cadastrar">Salvar</button>
+
               </form>
             </div>
           </div>
