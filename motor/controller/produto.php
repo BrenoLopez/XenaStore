@@ -11,6 +11,7 @@
 	$category = $_POST['category'];
 	$quantidade = $_POST['quantidade'];
 	$descricao = $_POST['descricao'];
+	$tema = $_POST['tema'];
 	// $imagem = $_FILES['imagem_produto'];
 	
 
@@ -36,7 +37,7 @@
 	
 	//parte3
 	$Item = new Produto();
-	$Item->SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem); 
+	$Item->SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem, $tema);
 	
 	
 		

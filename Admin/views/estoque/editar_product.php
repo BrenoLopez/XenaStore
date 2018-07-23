@@ -139,10 +139,31 @@
                       <label for="exampleInputName">Nome Produto</label>
                       <input class="form-control" id="name_product"  name="name_product" type="text" aria-describedby="nameHelp" value="<?php echo $prod['name_product']; ?>">
                     </div>
-                    <div class="col-md-6">
-                      <label for="exampleInputLastName">Categoria</label>
-                      <input class="form-control" id="category" name="category" type="text" aria-describedby="nameHelp"  value="<?php echo $prod['category']; ?>">
+                    <div class="col-md-3">
+                     <div class="form-group">
+                      <label for="exampleFormControlSelect1">Categoria</label>
+                      <select class="form-control" id="category" name="category">
+                        <option value="null"> Selecione uma Categoria</option>
+                        <option value="Camisa">Camisas</option>
+                        <option value="Caneca">Canecas</option>
+                        <option value="Moletons">Moletons</option>
+                        <option value="Posters">Posters</option>
+                      </select>
                     </div>
+                  </div>
+
+                  <div class="col-md-3">
+                     <div class="form-group">
+                      <label for="exampleFormControlSelect1">Temas</label>
+                      <select class="form-control" id="tema" name="tema">
+                        <option value="null" >Selecione um tema</option>
+                        <option value="Animes">Animes</option>
+                        <option value="Series">Series</option>
+                        <option value="HQ">HQ</option>
+                        <option value="Desenhos">Desenhos</option>
+                      </select>
+                    </div>
+                  </div>
                   </div>
                 </div>
                 <br>
@@ -245,8 +266,10 @@
       var valor= $('#valor').val();
       var descricao= $('#descricao').val();
       var imagem= $('#imagem').val();
+      var tema= $('#tema').val();
 
-      if(!name_product || !category || !quantidade || !valor || !descricao || !imagem){
+
+      if(!name_product || !category || !quantidade || !valor || !descricao || !imagem || !tema){
         return alert("todos os campos devem ser preenchidos!!")
       }else {
           //enviando formulario 

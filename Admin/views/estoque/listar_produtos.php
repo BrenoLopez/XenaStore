@@ -165,6 +165,7 @@
 													<th>ID</th>
 													<th>Nome</th>
 													<th>Categoria</th>
+													<th>Tema</th>
 													<th>Quantidade</th>
 													<th>Valor</th>
 													<th>Descrição</th>
@@ -179,6 +180,7 @@
 															<td><?php echo $prod['id_product'];?></td>
 															<td><?php echo $prod['name_product'];?></td>
 															<td><?php echo $prod['category'];?></td>
+															<td><?php echo $prod['tema'];?></td>
 															<td><?php echo $prod['quantidade'];?></td>
 															<td><?php echo $prod['valor']; ?></td>
 															<td><?php echo $prod['descricao']; ?></td>

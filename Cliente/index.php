@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
   <head>
 
@@ -8,24 +8,59 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Home - XenaStore</title>
+    <title>Modern Business - Start Bootstrap Template</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/bootstrap/js/bootstrap.min.js">
+
   </head>
 
   <body>
 
-<?php
-require_once 'controllers/MenuRodape.php';
+    <!-- Navigation -->
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <a class="navbar-brand " href="../index.php"><img src="">Logo</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-$MenuRodape  = new MenuRodape();
-$MenuRodape->menu();
-?>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item ">
+                    <a class="nav-link " href="views/Camisas.php">Camisas</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="views/Moletons.php">Moletons</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="views/Canecas.php">Canecas</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="views/Posters.php">Posters</a>
+                    </li>
+                </ul>
+
+                <form class="form-inline my-2 my-lg-0 ml-2" method="post">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Faça sua busca aqui">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+
+
+                <a href="../auth/login.php">
+                    <button class="btn btn-outline-light ml-2 ">Cadastrar/Login</button>
+                </a>
+                <a href="">
+                    <button class="btn btn-outline-light ml-2 ">Carrinho</button>
+                </a>
+
+            </div>
+        </nav>
+
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -70,30 +105,58 @@ $MenuRodape->menu();
     <!-- Page Content -->
     <div class="container">
 
-     <!-- Lista de alguns produtos randomicos do banco de dados -->
+      <h1 class="my-4 text-center">Produtos em destaques</h1>
+
+      <!-- Marketing Icons Section -->
       <div class="row">
         <div class="col-lg-4 mb-4">
-          <div class="card h-100" style="text-align: center">
-            <h4 class="card-header" >Nome produto do banco</h4>
-            <div class="card-body" >
-            <a href="#" ><img src="" >Foto do produto</a>
-              <p class="card-text">Descricao do produto do banco</p>
+          <div class="card h-100">
+            <h4 class="card-header">Card Title</h4>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
+              <a href="#" class="btn btn-primary">Comprar</a>
             </div>
           </div>
         </div>
-
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Card Title</h4>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 mb-4">
+          <div class="card h-100">
+            <h4 class="card-header">Card Title</h4>
+            <div class="card-body">
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            </div>
+            <div class="card-footer">
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
       </div>
-      <hr>
     </div>
-    <!-- /.container -->
+      <!-- /.row -->
 
-<?php
-$MenuRodape->Rodape();
-?>
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
 
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   </body>
 

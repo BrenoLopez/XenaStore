@@ -12,12 +12,13 @@
 		private $quantidade;
 		private $descricao;
 		private $imagem;
+		private $tema;
 				
 
 		//setters
 		
 		//Funcao que seta uma instancia da classe
-		public function SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem) { 
+		public function SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem, $tema) { 
 			$this->id_product = $id_product;
 			$this->name_product = $name_product;
 			$this->valor = $valor;
@@ -25,6 +26,7 @@
 			$this->quantidade = $quantidade;
 			$this->descricao = $descricao;
 			$this->imagem = $imagem;
+			$this->tema = $tema;
 						
 		}
 		
@@ -43,7 +45,8 @@
 				 			category,
 				 			quantidade,
 				 			descricao,
-				 			imagem
+				 			imagem,
+				 			tema
 						  )  
 				VALUES 
 					(
@@ -53,7 +56,8 @@
 				 			'$this->category',
 				 			'$this->quantidade',
 				 			'$this->descricao',
-				 			'$this->imagem'
+				 			'$this->imagem',
+				 			'$this->tema'
 					);
 			";
 			
@@ -74,11 +78,42 @@
 					 t1.category,
 					 t1.quantidade,
 					 t1.descricao,
-					 t1.imagem
+					 t1.imagem,
+					 t1.tema
+
 				FROM
 					produto AS t1
 				WHERE
 					t1.id_product  = '$id'
+
+			";
+			
+			
+			$DB = new DB();
+			$DB->open();
+			$Data = $DB->fetchData($sql);
+			
+			$DB->close();
+			return $Data[0]; 
+		}
+
+       //função para retornar somentes produtos do tipo camisas;
+		public function ReadProduto($categoria) {
+			$sql = "
+				SELECT
+					 t1.id_product,
+					 t1.name_product,
+					 t1.valor,
+					 t1.category,
+					 t1.quantidade,
+					 t1.descricao,
+					 t1.imagem,
+					 t1.tema
+
+				FROM
+					produto AS t1
+				WHERE
+					t1.category  = '$categoria'
 
 			";
 			
@@ -102,7 +137,8 @@
 					 t1.category,
 					 t1.quantidade,
 					 t1.descricao,
-					 t1.imagem
+					 t1.imagem,
+					 t1.tema
 				FROM
 					produto AS t1
 				
@@ -143,7 +179,8 @@
 					 t1.category,
 					 t1.quantidade,
 					 t1.descricao,
-					 t1.imagem
+					 t1.imagem,
+					 t1.tema
 				FROM
 					produto AS t1
 					
@@ -170,7 +207,8 @@
 				  category = '$this->category',
 				  quantidade = '$this->quantidade',
 				  descricao = '$this->descricao',
-				  imagem = '$this->imagem'
+				  imagem = '$this->imagem',
+				  tema = '$this->tema',
 				
 				WHERE id_product = '$this->id_product';
 				
@@ -225,6 +263,7 @@
 			$this->quantidade;
 			$this->descricao;
 			$this->imagem;
+			$this->tema;
 			
 			
 		}
@@ -238,6 +277,7 @@
 			$this->quantidade;
 			$this->descricao;
 			$this->imagem;
+			$this->tema;
 			
 			
 		}
