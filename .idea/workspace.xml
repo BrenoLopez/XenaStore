@@ -11,69 +11,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Carrinho.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Info_produto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cliente/views/Info_produto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Carrinho.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Cliente/views/Carrinho.php">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cliente/views/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="58" column="139" selection-start-line="58" selection-start-column="139" selection-end-line="58" selection-end-column="139" />
+            <state relative-caret-position="275">
+              <caret line="82" column="15" lean-forward="true" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
+              <folding>
+                <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Moletons.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cliente/views/Moletons.php">
+      <file leaf-file-name="forma_pagamento.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Cliente/views/forma_pagamento.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="61" column="147" selection-start-line="61" selection-start-column="147" selection-end-line="61" selection-end-column="147" />
+            <state relative-caret-position="272">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Posters.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cliente/views/Posters.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="61" column="147" selection-start-line="61" selection-start-column="147" selection-end-line="61" selection-end-column="147" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Acessorios.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cliente/views/Acessorios.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="61" column="147" selection-start-line="61" selection-start-column="147" selection-end-line="61" selection-end-column="147" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Camisas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cliente/views/Camisas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="61" column="151" selection-start-line="61" selection-start-column="27" selection-end-line="61" selection-end-column="151" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Canecas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cliente/views/Canecas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="61" column="147" selection-start-line="61" selection-start-column="147" selection-end-line="61" selection-end-column="147" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="finalizar_compra.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Cliente/views/finalizar_compra.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-714" />
           </provider>
         </entry>
       </file>
@@ -82,11 +46,15 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>navbar-dark</find>
+      <find>total</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.txt" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -101,13 +69,14 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
         <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
-        <option value="$PROJECT_DIR$/Cliente/views/Carrinho.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Camisas.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Acessorios.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Canecas.php" />
         <option value="$PROJECT_DIR$/Cliente/views/index.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Moletons.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Posters.php" />
+        <option value="$PROJECT_DIR$/Cliente/views/Info_produto.php" />
+        <option value="$PROJECT_DIR$/Cliente/views/Carrinho.php" />
       </list>
     </option>
   </component>
@@ -220,20 +189,20 @@
       <workItem from="1532199479210" duration="288000" />
       <workItem from="1532449814755" duration="3209000" />
       <workItem from="1532453491790" duration="309000" />
-      <workItem from="1532454429982" duration="2673000" />
+      <workItem from="1532454429982" duration="8911000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35119000" />
+    <option name="totallyTimeSpent" value="41357000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="7" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Command Line Tools Console" weight="0.3290938" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -259,12 +228,12 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cliente/views/finalizar_compra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/motor/BD/conexao/bd.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -451,9 +420,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/forma_pagamento.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/controllers/BarraLateral.php" />
     <entry file="file://$PROJECT_DIR$/motor/controller/login.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -497,8 +463,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/Carrinho.php">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/Cliente/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="58" column="139" selection-start-line="58" selection-start-column="139" selection-end-line="58" selection-end-column="139" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/views/Moletons.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="61" column="147" selection-start-line="61" selection-start-column="147" selection-end-line="61" selection-end-column="147" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/views/Posters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="69" column="14" lean-forward="true" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/views/Acessorios.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -526,24 +510,27 @@
         <state relative-caret-position="-714" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/index.php">
+    <entry file="file://$PROJECT_DIR$/Cliente/views/forma_pagamento.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="58" column="139" selection-start-line="58" selection-start-column="139" selection-end-line="58" selection-end-column="139" />
+        <state relative-caret-position="272">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/Moletons.php">
+    <entry file="file://$PROJECT_DIR$/Cliente/views/Info_produto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="61" column="147" selection-start-line="61" selection-start-column="147" selection-end-line="61" selection-end-column="147" />
+        <state relative-caret-position="153">
+          <caret line="27" column="28" lean-forward="true" selection-start-line="27" selection-start-column="28" selection-end-line="27" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/Posters.php">
+    <entry file="file://$PROJECT_DIR$/Cliente/views/Carrinho.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="61" column="147" selection-start-line="61" selection-start-column="147" selection-end-line="61" selection-end-column="147" />
+        <state relative-caret-position="275">
+          <caret line="82" column="15" lean-forward="true" selection-start-line="82" selection-start-column="15" selection-end-line="82" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

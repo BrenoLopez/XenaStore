@@ -8,7 +8,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Camisas - XenaStore</title>
+        <title>Informações do produto - XenaStore</title>
 
         <!-- Bootstrap core CSS -->
         <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -25,7 +25,6 @@
         require_once '../controllers/MenuRodape.php';
         require_once '../../motor/requeridos.php';
         $MenuRodape  = new MenuRodape();
-        $MenuRodape->setCamisas("active");
         $MenuRodape->menu();
         ?>
 
@@ -37,7 +36,7 @@
         ?>
 
         <div class="container" >
-            <h1 class="my-4">Carrinho</h1>
+            <h1 class="my-4">Informações do produto</h1>
             <!-- Lista de alguns produtos randomicos do banco de dados -->
             <div class="row">
                 <div class="col-12">
@@ -86,7 +85,7 @@
                 </div>
                 <div class="col-sm">
                   <div class="col-md-12">
-                      <label for="exampleInputName">Total</label>
+                      <label for="exampleInputName">Quantidade</label>
                       <input class="form-control" id="quantidade"  name="quantidade" type="number" aria-describedby="nameHelp">
                     </div>
               </div>
@@ -97,7 +96,7 @@
         <div class="row">
           <div class="col-sm-12"></div>
           <div class="col-sm-4">
-            <a href="forma_pagamento.php?id=<?php echo $prod['id_product']; ?>">
+            <a href="Carrinho.php?id=<?php echo $prod['id_product']; ?>">
               <button type="button" class="btn btn-primary">Continuar</button>
           </a>
           </div>
