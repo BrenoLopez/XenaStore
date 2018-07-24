@@ -22,50 +22,16 @@
 <?php
 require_once '../motor/requeridos.php';
 require_once 'controllers/MenuRodape.php';
-
+require_once 'controllers/Slides.php';
 $MenuRodape  = new MenuRodape();
 $MenuRodape->menu();
+$slides = new Slides();
+$slides->setImg1('../../../XenaStore/Cliente/img-fixa/camisas/camisa.jpg');
+$slides->setImg2('../../../XenaStore/Cliente/img-fixa/camisas/camisa2.jpg');
+$slides->setImg3('../../../XenaStore/Cliente/img-fixa/camisas/camisa3.jpg');
+$slides->codSlide();
+
 ?>
-    <header>
-      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner" role="listbox">
-          <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('img-fixa/camisas/camisa5.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>First Slide</h3>
-              <p>descrição.</p>
-            </div>
-          </div>
-          <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('img-fixa/camisas/camisa2.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Second Slide</h3>
-              <p>descrição.</p>
-            </div>
-          </div>
-          <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('img-fixa/camisas/camisa3.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Third Slide</h3>
-              <p>descrição.</p>
-            </div>
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-    </header>
 
     <?php
   // funÃ§Ã£o que recupera o produto de acordo com sua categoria 
