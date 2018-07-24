@@ -149,6 +149,22 @@
 			return $realData; 
 		}
 		
+		public function ReadByEmail($email){
+			$sql = "
+				SELECT *
+				FROM
+					user AS t1
+				WHERE
+					t1.email = '$email'
+			";
+			
+			$DB = new DB();
+			$DB->open();
+			$Data = $DB->fetchData($sql);
+			
+			$DB->close();
+			return $Data[0]; 
+		}
 		
 		
 		

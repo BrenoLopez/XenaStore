@@ -38,21 +38,21 @@ $MenuRodape->menu();
           <div class="carousel-item active" style="background-image: url('img-fixa/camisas/camisa5.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>First Slide</h3>
-              <p>descriÃ§Ã£o.</p>
+              <p>descrição.</p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
           <div class="carousel-item" style="background-image: url('img-fixa/camisas/camisa2.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>Second Slide</h3>
-              <p>descriÃ§Ã£o.</p>
+              <p>descrição.</p>
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
           <div class="carousel-item" style="background-image: url('img-fixa/camisas/camisa3.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>Third Slide</h3>
-              <p>descriÃ§Ã£o.</p>
+              <p>descrição.</p>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@ $MenuRodape->menu();
               <p class="card-text"> Valor R$: <?php echo $prod['valor'];?> </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
+              <a href="views/Info_Produto.php?id=<?php echo $prod['id_product']; ?>" class="btn btn-primary">Adicionar ao Carrinho</a>
             </div>
           </div>
         </div>
