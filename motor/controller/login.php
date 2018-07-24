@@ -1,26 +1,34 @@
 <?php
 session_start();
 
-require_once "../motor/requeridos.php";
+require_once "../requeridos.php";
 
 $email = $_POST['email'];
 $senha = $_POST['senha'];
 $res;
 
+$email="greisonsantos03@gmail.com";
+$senha="160597";
+
 $User = new User();
 $User = $User->ReadByEmail($email);
+
 
 if ($User === NULL) {
 	$res = 'no_user_found';
 	session_destroy();
 } else {
 	$verificaEmail = strcmp($email,$User['email']);
+     
 	if ($verificaEmail === 0) {
 		$verificaSenha = password_verify($senha,$User['password']);
+
+		var_dump($verificaSenha);
+		
 		if ($verificaSenha) {
-			$_SESSION['id'] = $User['id'];
-			$_SESSION['nome'] = $User['nome'];
-			$_SESSION['tipo_func'] = $User['tipo_func'];
+			$_SESSION['id_user'] = $User['id_user'];
+			$_SESSION['firt_name'] = $User['firt_name'];
+			$_SESSION['tipo'] = $User['tipo'];
 			$res = 'true';
 		} else {
 			$res = 'wrong_password';
