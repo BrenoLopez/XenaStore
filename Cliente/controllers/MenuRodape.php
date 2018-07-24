@@ -14,7 +14,7 @@ Class MenuRodape
         ?>
         <!-- Barra de navegação colocar como metodo de classe php-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand " href="../../../XenaStore/Cliente/index.php"><img src="">Logo</a>
+            <a class="navbar-brand " href="../views/index.php"><img src="">Logo</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -78,46 +78,33 @@ Class MenuRodape
 <?php
 
     }
-        /**
-     * @param mixed $camisas
-     * @return MenuRodape
-     */
+
     public function setCamisas($camisas)
     {
         $this->camisas = $camisas;
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
+
     public function getCamisas()
     {
         return $this->camisas;
     }
 
-    /**
-     * @param mixed $moletons
-     * @return MenuRodape
-     */
+
     public function setMoletons($moletons)
     {
         $this->moletons = $moletons;
         return $this;
     }
 
-    /**
-     * @return mixed
-     */
+
     public function getMoletons()
     {
         return $this->moletons;
     }
 
-    /**
-     * @param mixed $canecas
-     * @return MenuRodape
-     */
+
     public function setCanecas($canecas)
     {
         $this->canecas = $canecas;
@@ -129,10 +116,7 @@ Class MenuRodape
         return $this->canecas;
     }
 
-    /**
-     * @param mixed $posters
-     * @return MenuRodape
-     */
+
     public function setPosters($posters)
     {
         $this->posters = $posters;
@@ -144,10 +128,7 @@ Class MenuRodape
         return $this->posters;
     }
 
-    /**
-     * @param mixed $acessorios
-     * @return MenuRodape
-     */
+
     public function setAcessorios($acessorios)
     {
         $this->acessorios = $acessorios;

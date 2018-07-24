@@ -24,6 +24,7 @@
     <?php
     require_once '../controllers/MenuRodape.php';
     require_once '../controllers/Slides.php';
+    require_once '../../motor/requeridos.php';
 
     $slides = new Slides();
     $MenuRodape  = new MenuRodape();
@@ -35,28 +36,38 @@
     $slides->codSlide();
     ?>
 
-         
-   <div class="container" >
-    <h1 class="my-4">Camisas</h1>
-    <!-- Lista de alguns produtos randomicos do banco de dados -->
-    <div class="row">
-        <div class="col-lg-4 mb-4">
-            <div class="card h-100" style="text-align: center">
-                <h4 class="card-header" >Nome produto do banco</h4>
-                <div class="card-body" >
-                    <a href="#" ><img src="" >Foto do produto</a>
-                    <p class="card-text">Descricao do produto do banco</p>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="btn btn-primary">Adicionar ao carrinho</a>
-                </div>
-            </div>
-        </div>
+    <?php
+    // funÃ§Ã£o que recupera o produto de acordo com sua categoria
+    $prod= new Produto();
+    $prod= $prod->ReadProduto('Camisa');
+    ?>
+    <!-- Page Content -->
+    <div class="container">
+        <h1 class="my-4">Camisas</h1>
+        <hr>
+        <!-- Marketing Icons Section -->
+        <div class="row">
 
+            <?php  foreach ($prod as $prod) {
+
+                ?>
+                <div class="col-lg-4 mb-4">
+                    <div class="card h-100">
+                        <h4 class="card-header"> <?php echo $prod['name_product'];?> </h4>
+                        <div class="card-body">
+                            <img src="<?php echo $prod['imagem']; ?>" style="margin-left: 100px; max-width: 100px; " >
+                            <p class="card-text"> Valor R$: <?php echo $prod['valor'];?> </p>
+                        </div>
+                        <div class="card-footer">
+                            <a href="views/Info_Produto.php?id=<?php echo $prod['id_product']; ?>" class="btn btn-primary">Adicionar ao Carrinho</a>
+                        </div>
+                    </div>
+                </div>
+            <?php  } ?>
+
+        </div>
     </div>
-    <hr>
-    </div>
-    <!-- /.container -->
+    <!-- /.row -->
 
     <?php
     //$MenuRodape->setFixo("fixed-bottom");
