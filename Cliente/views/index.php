@@ -11,24 +11,24 @@
     <title>Home - XenaStore</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/modern-business.css" rel="stylesheet">
-    <link rel="stylesheet" href="vendor/bootstrap/js/bootstrap.min.js">
+    <link href="../css/modern-business.css" rel="stylesheet">
+    <link rel="stylesheet" href="../vendor/bootstrap/js/bootstrap.min.js">
   </head>
   <body>
 
 <?php
-require_once '../motor/requeridos.php';
-require_once 'controllers/MenuRodape.php';
-require_once 'controllers/Slides.php';
+require_once '../../motor/requeridos.php';
+require_once '../controllers/MenuRodape.php';
+require_once '../controllers/Slides.php';
 $MenuRodape  = new MenuRodape();
 $MenuRodape->menu();
 $slides = new Slides();
-$slides->setImg1('../../../XenaStore/Cliente/img-fixa/camisas/camisa.jpg');
-$slides->setImg2('../../../XenaStore/Cliente/img-fixa/camisas/camisa2.jpg');
-$slides->setImg3('../../../XenaStore/Cliente/img-fixa/camisas/camisa3.jpg');
+$slides->setImg1('../img-fixa/camisas/camisa2.jpg');
+$slides->setImg2('../img-fixa/canecas/caneca1.jpg');
+$slides->setImg3('../img-fixa/moletons/moletons3.jpg');
 $slides->codSlide();
 
 ?>
@@ -37,8 +37,6 @@ $slides->codSlide();
   // funÃ§Ã£o que recupera o produto de acordo com sua categoria 
    $prod= new Produto();
    $prod= $prod->ReadProduto('Camisa');
-
-
 ?>
     <!-- Page Content -->
     <div class="container">
@@ -58,7 +56,7 @@ $slides->codSlide();
               <p class="card-text"> Valor R$: <?php echo $prod['valor'];?> </p>
             </div>
             <div class="card-footer">
-              <a href="views/Info_Produto.php?id=<?php echo $prod['id_product']; ?>" class="btn btn-primary">Adicionar ao Carrinho</a>
+                <a href="../views/Info_Produto.php?id=<?php echo $prod['id_product']; ?>" class="btn btn-primary">Adicionar ao Carrinho</a>
             </div>
           </div>
         </div>
