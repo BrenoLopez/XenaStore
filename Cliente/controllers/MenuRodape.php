@@ -24,19 +24,19 @@ Class MenuRodape
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 
                     <li class="nav-item <?= $this->getCamisas(); ?>">
-                    <a class="nav-link " href="../../../XenaStore/Cliente/views/Camisas.php">Camisas</a>
+                    <a class="nav-link " href="../../Cliente/views/Camisas.php">Camisas</a>
                     </li>
                     <li class="nav-item <?= $this->getMoletons(); ?>">
-                        <a class="nav-link" href="#">Moletons</a>
+                        <a class="nav-link" href="../../Cliente/views/Moletons.php">Moletons</a>
                     </li>
                     <li class="nav-item <?= $this->getCanecas(); ?>">
-                        <a class="nav-link " href="views/Canecas.php">Canecas</a>
+                        <a class="nav-link " href="../../Cliente/views/Canecas.php">Canecas</a>
                     </li>
                     <li class="nav-item <?= $this->getPosters(); ?>">
-                        <a class="nav-link " href="#">Posters</a>
+                        <a class="nav-link " href="../../Cliente/views/Posters.php">Posters</a>
                     </li>
                     <li class="nav-item <?= $this->getAcessorios(); ?>">
-                        <a class="nav-link " href="#">Acessórios</a>
+                        <a class="nav-link " href="../../Cliente/views/Acessorios.php">Acessórios</a>
                     </li>
 
                 </ul>
