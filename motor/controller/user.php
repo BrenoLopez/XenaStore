@@ -22,7 +22,7 @@
 	
 	//parte3
 	$Item = new User();
-	$Item->SetValues($id_user, $first_name, $last_name, $email, $password, $cpf, $endereco, $telefone, $cep, $tipo); 
+	$Item->SetValues($id_user, $first_name, $last_name, $email, password_hash($password, PASSWORD_DEFAULT), $cpf, $endereco, $telefone, $cep, $tipo); 
 	
 	
 		

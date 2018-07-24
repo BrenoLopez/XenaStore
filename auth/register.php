@@ -54,10 +54,10 @@
               </div>
             </div>
           </div>
-          <a class="btn btn-primary btn-block" href="login.html">Cadastrar</a>
+          <a class="btn btn-primary btn-block" href="login.php">Cadastrar</a>
         </form>
         <div class="text-center">
-          <a class="d-block small mt-3" href="login.html">Login </a>
+          <a class="d-block small mt-3" href="login.php">Login </a>
           <a class="d-block small" href="forgot-password.html">Esqueci Minha Senha</a>
         </div>
       </div>
@@ -69,5 +69,6 @@
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 </body>
-
 </html>
+
+
