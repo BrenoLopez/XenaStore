@@ -59,7 +59,7 @@ $prod= $prod->ReadProduto('Acessorios');
                         <p class="card-text"> Valor R$: <?php echo $prod['valor'];?> </p>
                     </div>
                     <div class="card-footer">
-                        <a href="views/Info_Produto.php?id=<?php echo $prod['id_product']; ?>" class="btn btn-primary">Adicionar ao Carrinho</a>
+                        <a href="../views/Info_Produto.php?id=<?php echo $prod['id_product']; ?>" class="btn btn-primary">Adicionar ao Carrinho</a>
                     </div>
                 </div>
             </div>
