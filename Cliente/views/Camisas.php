@@ -23,9 +23,16 @@
 
     <?php
     require_once '../controllers/MenuRodape.php';
+    require_once '../controllers/Slides.php';
+
+    $slides = new Slides();
     $MenuRodape  = new MenuRodape();
     $MenuRodape->setCamisas("active");
     $MenuRodape->menu();
+    $slides->setImg1('../img-fixa/camisas/camisa5.jpg');
+    $slides->setImg2('../img-fixa/camisas/camisa2.jpg');
+    $slides->setImg3('../img-fixa/camisas/camisa3.jpg');
+    $slides->codSlide();
     ?>
 
          
@@ -52,7 +59,7 @@
     <!-- /.container -->
 
     <?php
-    $MenuRodape->setFixo("fixed-bottom");
+    //$MenuRodape->setFixo("fixed-bottom");
     $MenuRodape->Rodape();
 
     ?>
