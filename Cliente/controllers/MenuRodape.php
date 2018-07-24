@@ -47,7 +47,7 @@ Class MenuRodape
                 </form>
 
 
-                <a href="../../XenaStore/auth/login.php">
+                <a href="../../../XenaStore/auth/login.php">
                     <button class="btn btn-outline-light ml-2 ">Cadastrar/Login</button>
                 </a>
                 <a href="">

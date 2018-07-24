@@ -4,8 +4,8 @@
     define("DB_HOSTI","localhost"); // host
     define("DB_USERNAMEI","root"); // username
     define("DB_PASSWORDI",""); // password
-    //define("DB_DATABASEI","XenaStore");
-    define("DB_DATABASEI","XenaStore_bd");// db name
+    define("DB_DATABASEI","XenaStore");
+    // define("DB_DATABASEI","XenaStore_bd");// db name
 
     class DB {
         private $dbi;

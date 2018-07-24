@@ -7,37 +7,41 @@ $email = $_POST['email'];
 $senha = $_POST['senha'];
 $res;
 
-$email="greisonsantos03@gmail.com";
-$senha="160597";
-
 $User = new User();
 $User = $User->ReadByEmail($email);
 
 
+
 if ($User === NULL) {
-	$res = 'no_user_found';
+	$res['res']= 'no_user_found';
 	session_destroy();
 } else {
 	$verificaEmail = strcmp($email,$User['email']);
-     
-	if ($verificaEmail === 0) {
+
+	if ($verificaEmail == 0) {
 		$verificaSenha = password_verify($senha,$User['password']);
 
-		var_dump($verificaSenha);
-		
 		if ($verificaSenha) {
 			$_SESSION['id_user'] = $User['id_user'];
-			$_SESSION['firt_name'] = $User['firt_name'];
+			$_SESSION['firt_name'] = $User['first_name'];
 			$_SESSION['tipo'] = $User['tipo'];
-			$res = 'true';
+			
+
+			if ($User['tipo']==1){
+				$res['tipo']='admin';
+			}else {
+				$res['tipo']='cli';
+			}
+			$res['res'] = 'true';
+
 		} else {
-			$res = 'wrong_password';
+			$res['res']= 'wrong_password';
 			session_destroy();
 		}
 	} else {
-		$res = 'wrong_user_found';
+		$res['res']= 'wrong_user_found';
 		session_destroy();
 	}
 }
-echo $res;
+echo json_encode($res);
 ?>

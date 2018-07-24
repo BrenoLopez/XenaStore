@@ -1,3 +1,28 @@
+<?php
+$showerros = true;
+if($showerros) {
+  ini_set("display_errors", $showerros);
+  error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+}
+
+session_start();
+
+session_name(sha1($_SERVER['HTTP_USER_AGENT'].$_SESSION['email']));
+
+if(empty($_SESSION)){
+  ?>
+  <script>
+    document.location.href = '../auth';
+  </script>
+  <?php
+}
+if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1201)) {
+  session_unset();
+  session_destroy();
+}
+$_SESSION['LAST_ACTIVITY'] = time();
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -231,7 +256,7 @@
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Sair</h5>
+              <h5 class="modal-title " >Sair</h5>
               <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">×</span>
               </button>
@@ -239,7 +264,7 @@
             <div class="modal-body">Realmente deseja sair?</div>
             <div class="modal-footer" id="sair">
               <button  class="btn btn-secondary" type="button"  data-dismiss="modal">Cancel</button>
-              <a class="btn btn-primary" href="../auth/login.html">Sair</a>
+              <a class="btn btn-primary sair" id="sair" href="../motor/controller/logout.php">Sair</a>
             </div>
           </div>
         </div>
@@ -261,4 +286,4 @@
       <!-- Custom scripts for this page-->
       <script src="js/sb-admin-datatables.min.js"></script>
       <script src="js/sb-admin-charts.min.js"></script>
-    
+  
