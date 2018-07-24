@@ -17,7 +17,7 @@
 
  if(isset($_FILES["imagem"])){
      $arquivo = $_FILES["imagem"];
-     $pasta_dir = "../../img/";//diretorio dos arquivos
+     $pasta_dir = "../img/";//diretorio dos arquivos
 
     if(!file_exists($pasta_dir)){
       mkdir($pasta_dir);

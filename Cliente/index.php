@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
   <head>
 
@@ -8,59 +8,24 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Modern Business - Start Bootstrap Template</title>
+    <title>Home - XenaStore</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="css/modern-business.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="vendor/bootstrap/js/bootstrap.min.js">
   </head>
-
   <body>
 
-    <!-- Navigation -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand " href="../index.php"><img src="">Logo</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<?php
+require_once '../motor/requeridos.php';
+require_once 'controllers/MenuRodape.php';
 
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-
-                    <li class="nav-item ">
-                    <a class="nav-link " href="views/Camisas.php">Camisas</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="views/Moletons.php">Moletons</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="views/Canecas.php">Canecas</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="views/Posters.php">Posters</a>
-                    </li>
-                </ul>
-
-                <form class="form-inline my-2 my-lg-0 ml-2" method="post">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Faça sua busca aqui">
-                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
-                </form>
-
-
-                <a href="../auth/login.php">
-                    <button class="btn btn-outline-light ml-2 ">Cadastrar/Login</button>
-                </a>
-                <a href="">
-                    <button class="btn btn-outline-light ml-2 ">Carrinho</button>
-                </a>
-
-            </div>
-        </nav>
-
+$MenuRodape  = new MenuRodape();
+$MenuRodape->menu();
+?>
     <header>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
@@ -70,24 +35,24 @@
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One - Set the background image for this slide in the line below -->
-          <div class="carousel-item active" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item active" style="background-image: url('img-fixa/camisas/camisa5.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>First Slide</h3>
-              <p>This is a description for the first slide.</p>
+              <p>descriÃ§Ã£o.</p>
             </div>
           </div>
           <!-- Slide Two - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item" style="background-image: url('img-fixa/camisas/camisa2.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>Second Slide</h3>
-              <p>This is a description for the second slide.</p>
+              <p>descriÃ§Ã£o.</p>
             </div>
           </div>
           <!-- Slide Three - Set the background image for this slide in the line below -->
-          <div class="carousel-item" style="background-image: url('http://placehold.it/1900x1080')">
+          <div class="carousel-item" style="background-image: url('img-fixa/camisas/camisa3.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>Third Slide</h3>
-              <p>This is a description for the third slide.</p>
+              <p>descriÃ§Ã£o.</p>
             </div>
           </div>
         </div>
@@ -102,61 +67,46 @@
       </div>
     </header>
 
+    <?php
+  // funÃ§Ã£o que recupera o produto de acordo com sua categoria 
+   $prod= new Produto();
+   $prod= $prod->ReadProduto('Camisa');
+
+
+?>
     <!-- Page Content -->
     <div class="container">
-
-      <h1 class="my-4 text-center">Produtos em destaques</h1>
-
+      <h1 class="my-4">Produtos em Destaque</h1>
+      <hr>
       <!-- Marketing Icons Section -->
       <div class="row">
+
+      <?php  foreach ($prod as $prod) {
+
+       ?> 
         <div class="col-lg-4 mb-4">
           <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
+            <h4 class="card-header"> <?php echo $prod['name_product'];?> </h4>
             <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+              <img src="<?php echo $prod['imagem']; ?>" style="margin-left: 100px; max-width: 100px; " >
+              <p class="card-text"> Valor R$: <?php echo $prod['valor'];?> </p>
             </div>
             <div class="card-footer">
-              <a href="#" class="btn btn-primary">Comprar</a>
+              <a href="#" class="btn btn-primary">Adicionar ao Carrinho</a>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
-            <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header">Card Title</h4>
-            <div class="card-body">
-              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-            </div>
-            <div class="card-footer">
-              <a href="#" class="btn btn-primary">Comprar</a>
-            </div>
-          </div>
-        </div>
+      <?php  } ?>
+        
       </div>
     </div>
       <!-- /.row -->
 
-    <!-- Footer -->
-    <footer class="py-5 bg-dark">
-      <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2018</p>
-      </div>
-      <!-- /.container -->
-    </footer>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<?php
+$MenuRodape->Rodape();
+?>
+
 
   </body>
 

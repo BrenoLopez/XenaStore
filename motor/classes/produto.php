@@ -123,7 +123,7 @@
 			$Data = $DB->fetchData($sql);
 			
 			$DB->close();
-			return $Data[0]; 
+			return $Data; 
 		}
 		
 		
