@@ -143,6 +143,7 @@ if(empty($_SESSION)){
                         <option value="Caneca">Canecas</option>
                         <option value="Moletons">Moletons</option>
                         <option value="Posters">Posters</option>
+                        <option value="Acessorios">Acessorios</option>
                       </select>
                     </div>
                   </div>
@@ -200,7 +201,7 @@ if(empty($_SESSION)){
       <footer class="sticky-footer">
         <div class="container">
           <div class="text-center">
-            <small>Copyright © Your Website 2018</small>
+            <small>Copyright © Xena Store 2018</small>
           </div>
         </div>
       </footer>

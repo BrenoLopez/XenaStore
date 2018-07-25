@@ -33,6 +33,7 @@ if(!empty($_SESSION)){   //se tiver sessão
     <!-- Custom styles for this template -->
     <link href="../css/modern-business.css" rel="stylesheet">
     <link rel="stylesheet" href="../vendor/bootstrap/js/bootstrap.min.js">
+    <link rel="shortcut icon" type="image/x-icon" href="../img-fixa/favicon.ico">
   </head>
   <body>
 
@@ -43,9 +44,9 @@ require_once '../controllers/Slides.php';
 $MenuRodape  = new MenuRodape();
 $MenuRodape->menu();
 $slides = new Slides();
-$slides->setImg1('../img-fixa/camisas/camisa2.jpg');
-$slides->setImg2('../img-fixa/canecas/caneca1.jpg');
-$slides->setImg3('../img-fixa/moletons/moletons3.jpg');
+$slides->setImg1('../img-fixa/index/slider-1.png');
+$slides->setImg2('../img-fixa/index/slider-2.png');
+$slides->setImg3('../img-fixa/index/slider-3.png');
 $slides->codSlide();
 
 
@@ -64,11 +65,11 @@ $slides->codSlide();
 
        ?> 
         <div class="col-lg-4 mb-4">
-          <div class="card h-100">
-            <h4 class="card-header"> <?php echo $prod['name_product'];?> </h4>
+          <div class="card h-100 text-center">
+            <h5 class="card-header"> <?php echo $prod['name_product'];?> </h5>
             <div class="card-body">
-              <img src="<?php echo $prod['imagem']; ?>" style="margin-left: 100px; width: 110px; height: 120px; " >
-              <p class="card-text"> Valor R$: <?php echo $prod['valor'];?> </p>
+              <img src="<?php echo $prod['imagem']; ?>" style="width: 100%;" >
+              <p class="card-text"><strong>Valor R$: <?php echo $prod['valor'];?></strong></p>
             </div>
             <div class="card-footer">
                 <a href="../views/Info_Produto.php?id=<?php echo $prod['id_product']; ?>" class="btn btn-primary">Adicionar ao Carrinho</a>

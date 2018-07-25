@@ -37,6 +37,7 @@ if(empty($_SESSION)){
   <link href="../css/modern-business.css" rel="stylesheet">
   <link rel="stylesheet" href="../vendor/bootstrap/js/bootstrap.min.js">
   <!-- <link href="../../Cliente/css/Camisas_css.css" rel="stylesheet"> -->
+  <link rel="shortcut icon" type="image/x-icon" href="../img-fixa/favicon.ico">
 </head>
 
 <body>

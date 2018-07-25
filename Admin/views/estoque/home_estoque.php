@@ -129,7 +129,7 @@ if(empty($_SESSION)){
     <div class="row">
       <div class="col-md-1"></div>
       <div class="col-xl-5 col-sm-6 mb-3">
-        <div class="card text-white bg-primary o-hidden h-100">
+        <div class="card text-white bg-primary o-hidden h-60">
            <a class="card-footer text-white clearfix small z-1" href="add_produtos.php">
           <div class="card-body">
             <div class="card-body-icon">
@@ -142,7 +142,7 @@ if(empty($_SESSION)){
       </div>
 
        <div class="col-xl-5 col-sm-6 mb-3">
-        <div class="card text-white bg-warning o-hidden h-100">
+        <div class="card text-white bg-warning o-hidden h-60">
            <a class="card-footer text-white clearfix small z-1" href="listar_produtos.php">
           <div class="card-body">
             <div class="card-body-icon">
@@ -160,7 +160,7 @@ if(empty($_SESSION)){
       <footer class="sticky-footer">
         <div class="container">
           <div class="text-center">
-            <small>Copyright © Your Website 2018</small>
+            <small>Copyright © Xena Store 2018</small>
           </div>
         </div>
       </footer>

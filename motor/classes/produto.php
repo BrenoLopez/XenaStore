@@ -14,6 +14,7 @@
 		private $imagem;
 		private $tema;
 
+
 		//setters
 		
 		//Funcao que seta uma instancia da classe
@@ -232,10 +233,13 @@
 			return $result;
 		}
 
-		//função para buscar no banco
-		public function buscaProd(){
 
 			$sql = "select * from produto where category = '$this->category' and like name_product = '%$this->itemBuscado%'";
+            $DB = new DB();
+            $DB->open();
+            $result = $DB->query($sql);
+            $DB->close();
+            return $result;
 
 		}
 		
