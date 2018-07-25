@@ -13,12 +13,12 @@
 		private $descricao;
 		private $imagem;
 		private $tema;
-				
+		private $itemBuscado;
 
 		//setters
 		
 		//Funcao que seta uma instancia da classe
-		public function SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem, $tema) { 
+		public function SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem, $tema,$itemBuscado) {
 			$this->id_product = $id_product;
 			$this->name_product = $name_product;
 			$this->valor = $valor;
@@ -27,7 +27,7 @@
 			$this->descricao = $descricao;
 			$this->imagem = $imagem;
 			$this->tema = $tema;
-						
+			$this->itemBuscado;
 		}
 		
 		
@@ -233,7 +233,13 @@
 			$DB->close();
 			return $result;
 		}
-		
+
+		//função para buscar no banco
+		public function buscaProd(){
+
+			$sql = "select * from produto where category = '$this->category' and like name_product = '%$this->itemBuscado%'";
+
+		}
 		
 		/*
 			--------------------------------------------------

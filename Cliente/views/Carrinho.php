@@ -90,7 +90,7 @@ $MenuRodape->menu();
                 <td>12</td>
                 <td>90,80</td>
                 <td class="actions">
-                    <a class="btn btn-danger btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Remover</a>
+                    <a class="btn btn-warning btn-xs"  href="#" data-toggle="modal" data-target="#delete-modal">Remover</a>
                 </td>
             </tr>
             </tbody>
@@ -113,10 +113,14 @@ $MenuRodape->menu();
         $prod= new Produto();
         $prod= $prod->Read($_GET['id']);
         ?>
-
         <a href="forma_pagamento.php?id=<?php echo $prod['id_product']; ?>"><button class="btn btn-dark">Finalizar compra</button></a>
     </div>
-
+    <div class="container" style="padding-left: 550px;">
+    <script>
+        document.write('<a href="' + document.referrer + '"><button class="btn btn-danger">Voltar</button></a>');
+    </script>
+    <a href="javascript:history.back()"></a>
+    </div>
 </div>
 
 

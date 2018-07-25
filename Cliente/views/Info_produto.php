@@ -128,13 +128,19 @@ if(empty($_SESSION)){
 
             <div class="row">
               <div class="col-sm-12"></div>
-              <div class="col-sm-4">
+              <div class="col-sm-4" style="margin-left: 13px">
                 <!-- <a href="Carrinho.php?id=<?php echo $prod['id_product']; ?>" id="continuar"> -->
                   <button type="button" class="btn btn-primary" id="continuar">Continuar</button>
                   <!-- </a> -->
-                </div>
-              </div>
 
+                </div>
+                <div style="margin-left: 120px;">
+                <script>
+                    document.write('<a href="' + document.referrer + '"><button class="btn btn-danger">Voltar</button></a>');
+                </script>
+                <a href="javascript:history.back()"></a>
+              </div>
+            </div>
             </div>
           </div>
         </div>

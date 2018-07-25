@@ -12,7 +12,7 @@ session_name(sha1($_SERVER['HTTP_USER_AGENT'].$_SESSION['email']));
 
 if(empty($_SESSION)){
   ?>
-  <script>
+     <script>
     document.location.href = '../../auth/login.php';
   </script>
   <?php
@@ -65,7 +65,7 @@ if(empty($_SESSION)){
 
         <div class="col">
           <div class="col-xl-12 col-sm-6 mb-3">
-            <div class="card text-white bg-primary o-hidden h-100">
+            <div class="card text-white bg-primary o-hidden h-60">
               <div class="card-body">
                 <div class="card-body-icon">
                   <i class="fa fa-fw fa-shopping-cart"></i>
@@ -86,7 +86,7 @@ if(empty($_SESSION)){
           
           <div class="col">
           <div class="col-xl-12 col-sm-6 mb-3">
-            <div class="card text-white bg-success o-hidden h-100">
+            <div class="card text-white bg-success o-hidden h-60">
               <div class="card-body">
                 <div class="card-body-icon">
                   <i class="fa fa-fw fa-shopping-cart"></i>
@@ -106,7 +106,12 @@ if(empty($_SESSION)){
         </div>
       </div>
       <br><br>
-      <button type="button" class="btn btn-primary">Voltar</button>
+          <div style="margin-left: 15px;">
+          <script>
+              document.write('<a href="' + document.referrer + '"><button class="btn btn-danger">Voltar</button></a>');
+          </script>
+          <a href="javascript:history.back()"></a>
+          </div>
     </div>
 
 
