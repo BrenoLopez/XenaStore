@@ -4,7 +4,6 @@
 	
 
 	//parte1
-	
 	$id_pedido = $_POST['id_pedido'];
 	$id_user = $_POST['id_user'];
 	$id_produto = $_POST['id_produto'];
