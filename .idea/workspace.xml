@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Camisas.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Cliente/views/Camisas.php">
+      <file leaf-file-name="cliente.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Admin/views/user/cliente.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="439">
+              <caret line="162" column="43" lean-forward="true" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -60,6 +60,7 @@
       <find>name_prod</find>
       <find>navbar-dark</find>
       <find>continua</find>
+      <find>h-</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,7 +77,6 @@
         <option value="$PROJECT_DIR$/Cliente/controllers/Slides.php" />
         <option value="$PROJECT_DIR$/Cliente/index.php" />
         <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/Admin/index.php" />
         <option value="$PROJECT_DIR$/Cliente/views/index.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Canecas.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Moletons.php" />
@@ -85,7 +85,6 @@
         <option value="$PROJECT_DIR$/Admin/views/estoque/listar_produtos.php" />
         <option value="$PROJECT_DIR$/Admin/views/estoque/editar_product.php" />
         <option value="$PROJECT_DIR$/motor/controller/produto.php" />
-        <option value="$PROJECT_DIR$/motor/BD/conexao/bd.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Info_produto.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Carrinho.php" />
         <option value="$PROJECT_DIR$/Cliente/views/forma_pagamento.php" />
@@ -98,6 +97,10 @@
         <option value="$PROJECT_DIR$/Cliente/js/Busca.js" />
         <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
         <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
+        <option value="$PROJECT_DIR$/motor/BD/conexao/bd.php" />
+        <option value="$PROJECT_DIR$/Admin/index.php" />
+        <option value="$PROJECT_DIR$/Admin/views/estoque/home_estoque.php" />
+        <option value="$PROJECT_DIR$/Admin/views/user/cliente.php" />
       </list>
     </option>
   </component>
@@ -129,6 +132,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -139,18 +143,27 @@
             <path>
               <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
               <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
               <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
-              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
               <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
-              <item name="Cliente" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="estoque" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
+              <item name="Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
@@ -161,13 +174,19 @@
               <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
               <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
               <item name="motor" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
+              <item name="BD" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
+              <item name="motor" type="462c0819:PsiDirectoryNode" />
+              <item name="BD" type="462c0819:PsiDirectoryNode" />
+              <item name="conexao" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -218,12 +237,13 @@
       <workItem from="1532454429982" duration="8911000" />
       <workItem from="1532467663234" duration="654000" />
       <workItem from="1532480569297" duration="9116000" />
-      <workItem from="1532518533847" duration="11439000" />
+      <workItem from="1532518533847" duration="11489000" />
+      <workItem from="1532543693043" duration="1286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63192000" />
+    <option name="totallyTimeSpent" value="64528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -264,13 +284,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cliente/views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/views/Canecas.php" />
     <entry file="file://$PROJECT_DIR$/Cliente/controllers/MenuRodape.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -330,13 +343,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/controllers/BarraLateral.php" />
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/contact.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -364,18 +370,6 @@
         <state relative-caret-position="162">
           <caret line="57" column="125" selection-start-line="57" selection-start-column="125" selection-end-line="57" selection-end-column="125" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="66" column="36" selection-start-line="66" selection-start-column="29" selection-end-line="66" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Admin/views/estoque/home_estoque.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1785" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/motor/requeridos.php">
@@ -434,16 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="326">
           <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motor/BD/conexao/bd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -451,9 +435,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="122" column="44" lean-forward="true" selection-start-line="119" selection-start-column="3" selection-end-line="122" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -461,10 +442,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="466">
           <caret line="140" column="56" lean-forward="true" selection-start-line="140" selection-start-column="56" selection-end-line="140" selection-end-column="56" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -493,9 +470,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -503,44 +477,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-932">
           <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/js/Busca.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/js/Busca.js" />
     <entry file="file://$PROJECT_DIR$/Cliente/js/contact_me.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#76#83#1" expanded="true" />
-            <element signature="e#76#83#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/controllers/ControllerFuncoes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/Busca.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/controllers/ControllerFuncoes.php" />
+    <entry file="file://$PROJECT_DIR$/Cliente/views/Busca.php" />
     <entry file="file://$PROJECT_DIR$/Cliente/controllers/Slides.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
@@ -564,8 +509,43 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/views/Camisas.php">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-776">
+          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motor/BD/conexao/bd.php">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
-          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/views/estoque/home_estoque.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="162" column="41" selection-start-line="162" selection-start-column="41" selection-end-line="162" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Admin/views/user/cliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="162" column="43" lean-forward="true" selection-start-line="162" selection-start-column="43" selection-end-line="162" selection-end-column="43" />
         </state>
       </provider>
     </entry>
