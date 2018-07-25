@@ -64,16 +64,16 @@ if(empty($_SESSION)){
 						<span class="nav-link-text">Pedidos</span>
 					</a>
 					<ul class="sidenav-second-level collapse" id="collapseComponents">
-            <li>
-              <a href="../pedidos/listar_pedidos_novos.php">Novos</a>
-            </li>
-            <li>
-              <a href="../pedidos/listar_pedidos_entregues.php">Entregues</a>
-            </li>
-            <li>
-              <a href="../pedidos/listar_pedidos_cancelados.php">Cancelados</a>
-            </li>
-          </ul>
+						<li>
+							<a href="listar_pedidos_novos.php">Novos</a>
+						</li>
+						<li>
+              				<a href="listar_pedidos_entregues.php">Entregues</a>
+            			</li>
+            			<li>
+             				 <a href="listar_pedidos_cancelados.php">Cancelados</a>
+            			</li>
+					</ul>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
 					<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
@@ -94,10 +94,10 @@ if(empty($_SESSION)){
 
 					<ul class="sidenav-second-level collapse" id="collapseMulti">
 						<li>
-							<a href="cliente.php" id="cadastro_user">Clientes</a>
+							<a href="../user/cliente.php" id="cadastro_user">Clientes</a>
 						</li>
 						<li>
-							<a href="func.php">Funcionários</a>
+							<a href="../user/func.php">Funcionários</a>
 						</li>
 
 					</ul>
@@ -124,7 +124,7 @@ if(empty($_SESSION)){
 				<!-- Breadcrumbs-->
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
-						<a href="func.php">Funcionarios</a>
+						<a href="listar_pedidos_cancelados.php">Pedidos Cancelados</a>
 					</li>
 					<li class="breadcrumb-item active"> Listar</li>
 				</ol>
@@ -151,7 +151,7 @@ if(empty($_SESSION)){
 
 				<?php  
 				$user= new User();
-				$user=$user->ReadFunc();
+				$user=$user->ReadAll();
 
 				if(empty($user)) {
 					?>
@@ -161,7 +161,7 @@ if(empty($_SESSION)){
 				} else {
 
 					?>
-                  <h1> Funcionários Cadastrados </h1>
+                  <h1> Pedidos Cancelados </h1>
                   <br >
 					<div class="content">
 						<div class="container-fluid">

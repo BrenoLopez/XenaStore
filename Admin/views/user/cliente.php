@@ -64,9 +64,14 @@ if(empty($_SESSION)){
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="navbar.html">Todos os Pedido</a>
+              <a href="../pedidos/listar_pedidos_novos.php">Novos</a>
             </li>
-            
+            <li>
+              <a href="../pedidos/listar_pedidos_entregues.php">Entregues</a>
+            </li>
+            <li>
+              <a href="../pedidos/listar_pedidos_cancelados.php">Cancelados</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
@@ -147,22 +152,9 @@ if(empty($_SESSION)){
     <br><br><br>
     <div class="row">
       <div class="col-md-1"></div>
-      <div class="col-xl-5 col-sm-6 mb-3">
-        <div class="card text-white bg-primary o-hidden h-60">
-           <a class="card-footer text-white clearfix small z-1" href="#">
-          <div class="card-body">
-            <div class="card-body-icon">
-              <i class="fa fa-fw fa-user"></i>
-            </div>
-           <h3> <div class="mr-5">Cadastrar Clientes(NÃO VAI TER ESSA OPACAO)</div> </h3>
-          </div>
-          </a>
-        </div>
-      </div>
-
        <div class="col-xl-5 col-sm-6 mb-3">
-        <div class="card text-white bg-warning o-hidden h-60">
-           <a class="card-footer text-white clearfix small z-1" href="#">
+        <div class="card text-white bg-warning o-hidden h-100">
+           <a class="card-footer text-white clearfix small z-1" href="listar_cli.php">
           <div class="card-body">
             <div class="card-body-icon">
               <i class="fa fa-fw fa-list"></i>

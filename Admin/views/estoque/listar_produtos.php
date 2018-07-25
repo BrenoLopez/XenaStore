@@ -62,12 +62,17 @@ if(empty($_SESSION)){
 						<i class="fa fa-fw fa-list fa-5x"></i>
 						<span class="nav-link-text">Pedidos</span>
 					</a>
-					<ul class="sidenav-second-level collapse" id="collapseComponents">
-						<li>
-							<a href="navbar.html">Todos os Pedido</a>
-						</li>
-						
-					</ul>
+						<ul class="sidenav-second-level collapse" id="collapseComponents">
+           				<li>
+              				<a href="../pedidos/listar_pedidos_novos.php">Novos</a>
+            			</li>
+            			<li>
+            			  <a href="../pedidos/listar_pedidos_entregues.php">Entregues</a>
+           				</li>
+            			<li>
+             			 <a href="../pedidos/listar_pedidos_cancelados.php">Cancelados</a>
+            			</li>
+          				</ul>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
 					<a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#collapseExamplePages" data-parent="#exampleAccordion">
