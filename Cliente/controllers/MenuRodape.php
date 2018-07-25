@@ -50,7 +50,7 @@ Class MenuRodape
                 <a href="../../../XenaStore/auth/login.php">
                     <button class="btn btn-outline-light ml-2 ">Cadastrar/Login</button>
                 </a>
-                <a href="">
+                <a href="../views/Carrinho.php">
                     <button class="btn btn-outline-light ml-2 ">Carrinho</button>
                 </a>
 
