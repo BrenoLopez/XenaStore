@@ -124,7 +124,7 @@ if(empty($_SESSION)){
 				<!-- Breadcrumbs-->
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item">
-						<a href="func.php">Funcionarios</a>
+						<a href="cliente.php">Clientes</a>
 					</li>
 					<li class="breadcrumb-item active"> Listar</li>
 				</ol>
@@ -151,7 +151,7 @@ if(empty($_SESSION)){
 
 				<?php  
 				$user= new User();
-				$user=$user->ReadFunc();
+				$user=$user->ReadCli();
 
 				if(empty($user)) {
 					?>
@@ -161,7 +161,7 @@ if(empty($_SESSION)){
 				} else {
 
 					?>
-                  <h1> Funcionários Cadastrados </h1>
+                  <h1> Clientes Cadastrados </h1>
                   <br >
 					<div class="content">
 						<div class="container-fluid">

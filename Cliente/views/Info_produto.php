@@ -191,12 +191,11 @@ $MenuRodape->Rodape();
       var tema = $('#tema').val();
      
     
-      alert(imagem);
 
       if(!quantidade || !tamanho ){
        swal("Atenção!", "Todos os campos devem ser preenchidos!", "info");
      }else if(  parseInt(quantidade) > parseInt(quant_disponivel)) {
-       swal("Atenção!", "Quantidade de Produto Inssuficiente!", "info");
+       swal("Atenção!", "Quantidade de Produto Insuficiente!", "info");
      }else{
          var quant_aux= quant_disponivel - quantidade;
 

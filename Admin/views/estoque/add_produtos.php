@@ -63,9 +63,14 @@ if(empty($_SESSION)){
           </a>
           <ul class="sidenav-second-level collapse" id="collapseComponents">
             <li>
-              <a href="navbar.html">Todos os Pedido</a>
+              <a href="../pedidos/listar_pedidos_novos.php">Novos</a>
             </li>
-
+            <li>
+              <a href="../pedidos/listar_pedidos_entregues.php">Entregues</a>
+            </li>
+            <li>
+              <a href="../pedidos/listar_pedidos_cancelados.php">Cancelados</a>
+            </li>
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">

@@ -101,35 +101,29 @@
 			return $Data[0]; 
 		}
 
-// 		SELECT C.NOME, C.STATUS, P.DESCRICAO, P.VALOR 
-// FROM CLIENTES AS C 
-// JOIN PEDIDOS AS P ON C.IDCLIENTE = P.IDPEDIDO
+
+		public function ReadPedidos($id_user) {
+			$sql = "
+				SELECT
+				* FROM
+					pedido AS t1
+				 JOIN produto AS p1
+				ON
+				t1.id_produto = p1.id_product
+				WHERE
+					t1.situacao = '0'
+				AND t1.id_user= '$id_user';
 
 
-
-		//Funcao que retorna  produtos do carrinho
-		// public function readPendente() {
-		// 	$sql = "
-		// 		SELECT
-
-		// 		*FROM
-		// 			pedido AS t1
-		//         JOIN user  AS U1
-  //               ON
-		// 		t1.id_produto =U1.id_product
-		// 		WHERE t1.situacao
-      
-		// 	";
+			";
 			
+			$DB = new DB();
+			$DB->open();
+			$Data = $DB->fetchData($sql);
 			
-		// 	$DB = new DB();
-		// 	$DB->open();
-		// 	$Data = $DB->fetchData($sql);
-			
-		// 	$DB->close();
-		// 	return $Data[0]; 
-		// }
-		
+			$DB->close();
+			return $Data; 
+		}
 		
 		//Funcao que retorna um vetor com todos as instancias da classe no BD
 		public function ReadAll() {
