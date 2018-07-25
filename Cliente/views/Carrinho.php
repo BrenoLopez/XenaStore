@@ -54,11 +54,8 @@ if(empty($_SESSION)){
 
     $ped= new Pedido();
     $ped= $ped->ReadPedidos($_SESSION['id_user']);
-
-    $user= new User();
-    $user= $user->Read($_SESSION['id_user']);
-
-
+   
+  
     ?>
 
     <br><br><br><br>
@@ -112,7 +109,14 @@ if(empty($_SESSION)){
         </table>
 
     </div>
+<?php  
 
+  $id= $_SESSION['id_user'];
+
+    $user= new User();
+    $user= $user->Read($id);
+
+?>
     <div class="col-3" style="border: 2px solid black;background-color: darkgray">
         <table class="table">
     <tbody>
@@ -157,102 +161,4 @@ if(empty($_SESSION)){
 
 <script type="text/javascript">
 
-  //  function remover(id){
-  
-  // alert(id);
-  //  }
-
-
-
-  $(document).ready(function(e) {
-    $('#remover').click(function(e) {
-      
-
-      alert("ok");
-
-      //vaeriaves da tabela pedido 
-      var quantidade = $('#quantidade').val();
-      var quant_disponivel = $('#quant_disponivel').val();
-      var tamanho = $('#tamanho').val();
-      var valor = $('#valor').val();
-      var data_pedido = $('#data_pedido').val();
-      var id_user = $('#id_user').val();
-      var id_produto = $('#id_produto').val();
-      var  valor_total =quantidade*valor;
-
-      //variaveis do produto para atualizar a quantidade desse produto;
-  
-      var name_product = $('#name_product').val();
-      var valor = $('#valor').val();
-      var category = $('#category').val();
-      var descricao = $('#descricao').val();
-      var imagem = $('#imagem').val();
-      var tema = $('#tema').val();
-     
-    
-
-      if(!quantidade || !tamanho ){
-       swal("Atenção!", "Todos os campos devem ser preenchidos!", "info");
-     }else if(  parseInt(quantidade) > parseInt(quant_disponivel)) {
-       swal("Atenção!", "Quantidade de Produto Inssuficiente!", "info");
-     }else{
-         var quant_aux= quant_disponivel - quantidade;
-
-        $.ajax({
-         url: '../../motor/controller/pedido.php',
-         data: {
-
-          id_user : id_user,
-          id_produto: id_produto,
-          situacao: 0,
-          data_pedido: data_pedido,
-          quantidade : quantidade,
-          valor_total :valor_total,
-          tamanho : tamanho,
-          forma_pagamento : '-',
-
-          action: 'create'
-        },
-
-        type: 'POST'
-      });
-
-       $.ajax({
-         url: '../../motor/controller/produto.php',
-         data: {
-
-          id_product : id_produto,
-          name_product : name_product,
-          valor : valor,
-          category : category,
-          quantidade : quant_aux,
-          descricao : descricao,
-          imagem : imagem,
-          tema : tema,
-
-          action: 'update'
-        },
-
-        success: function(data) {
-          console.log(data);
-
-
-// não ta retornando true pois não estou passando o id do pedido pois e auto-increment
-          if(data !='true'){
-            setTimeout(function(){
-             window.location = 'Carrinho.php?id='+id_produto;
-           },100);
-          }else{
-
-            swal("Atenção", "Erro ao conectar com banco de dados. Aguarde e tente novamente em alguns instantes.", "error");
-          }
-        },
-
-        type: 'POST'
-
-      });
-     }
-
-   });
-  });
-</script>
+ 

@@ -233,15 +233,6 @@
 			return $result;
 		}
 
-
-			$sql = "select * from produto where category = '$this->category' and like name_product = '%$this->itemBuscado%'";
-            $DB = new DB();
-            $DB->open();
-            $result = $DB->query($sql);
-            $DB->close();
-            return $result;
-
-		}
 		
 		/*
 			--------------------------------------------------
