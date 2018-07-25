@@ -46,14 +46,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forma_pagamento.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="forma_pagamento.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Cliente/views/forma_pagamento.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+            <state relative-caret-position="326">
+              <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="produto.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/motor/controller/produto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1258">
+              <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="produto.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/motor/classes/produto.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="241" column="9" lean-forward="true" selection-start-line="241" selection-start-column="9" selection-end-line="241" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -103,7 +121,6 @@
         <option value="$PROJECT_DIR$/Admin/views/estoque/add_produtos.php" />
         <option value="$PROJECT_DIR$/Admin/views/estoque/listar_produtos.php" />
         <option value="$PROJECT_DIR$/Admin/views/estoque/editar_product.php" />
-        <option value="$PROJECT_DIR$/motor/classes/produto.php" />
         <option value="$PROJECT_DIR$/motor/controller/produto.php" />
         <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
         <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
@@ -111,6 +128,7 @@
         <option value="$PROJECT_DIR$/Cliente/views/Info_produto.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Carrinho.php" />
         <option value="$PROJECT_DIR$/Cliente/views/forma_pagamento.php" />
+        <option value="$PROJECT_DIR$/motor/classes/produto.php" />
       </list>
     </option>
   </component>
@@ -175,14 +193,19 @@
               <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
               <item name="motor" type="462c0819:PsiDirectoryNode" />
               <item name="BD" type="462c0819:PsiDirectoryNode" />
-              <item name="BD_sql" type="462c0819:PsiDirectoryNode" />
+              <item name="conexao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
               <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
               <item name="motor" type="462c0819:PsiDirectoryNode" />
-              <item name="BD" type="462c0819:PsiDirectoryNode" />
-              <item name="conexao" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
+              <item name="motor" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -239,12 +262,12 @@
       <workItem from="1532454429982" duration="8911000" />
       <workItem from="1532467663234" duration="654000" />
       <workItem from="1532480569297" duration="9116000" />
-      <workItem from="1532518533847" duration="4155000" />
+      <workItem from="1532518533847" duration="6271000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="55908000" />
+    <option name="totallyTimeSpent" value="58024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -502,20 +525,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/motor/classes/produto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="210" column="38" selection-start-line="210" selection-start-column="38" selection-end-line="210" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motor/controller/produto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/views/estoque/editar_product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -562,11 +571,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/views/forma_pagamento.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+        <state relative-caret-position="326">
+          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motor/controller/produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="74" column="11" selection-start-line="74" selection-start-column="11" selection-end-line="74" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motor/classes/produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="394">
+          <caret line="241" column="9" lean-forward="true" selection-start-line="241" selection-start-column="9" selection-end-line="241" selection-end-column="9" />
         </state>
       </provider>
     </entry>
