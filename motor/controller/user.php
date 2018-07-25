@@ -33,8 +33,6 @@
 	//parte4
 	switch($action) {
 		case 'create':
-			
-			
 			$res = $Item->Create();
 			if ($res === NULL) {
 				$res = "true";
@@ -46,12 +44,25 @@
 
 			//retornando para pagina apos cadastrar
 			header("location: ../../auth/login.php");
+		break;
+
+		case 'create_func':
+			$res = $Item->Create();
+			if ($res === NULL) {
+				$res = "true";
+			}
+			else {
+				$res = "false";	
+			}			
+			// echo $res;
+
+			//retornando para pagina apos cadastrar
+			header("location: ../../admin/views/user/func.php");
 		break;	
 		
 		case 'update':
 		
-			
-			
+		
 			$res = $Item->Update();
 			
 			if ($res === NULL) {

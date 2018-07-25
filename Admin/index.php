@@ -6,23 +6,18 @@ if($showerros) {
 }
 
 session_start();
+// Inicia a sessão
 
 session_name(sha1($_SERVER['HTTP_USER_AGENT'].$_SESSION['email']));
 
 if(empty($_SESSION)){
   ?>
   <script>
-    document.location.href = '../auth';
+    document.location.href = '../auth/login.php';
   </script>
   <?php
 }
-if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 1201)) {
-  session_unset();
-  session_destroy();
-}
-$_SESSION['LAST_ACTIVITY'] = time();
-?>
-
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -70,15 +65,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
             <li>
               <a href="navbar.html">Todos os Pedido</a>
             </li>
-            <li>
-              <a href="cards.html">Entregues</a>
-            </li>
-            <li>
-              <a href="cards.html">Cancelados</a>
-            </li>
-            <li>
-              <a href="cards.html">Novos</a>
-            </li>
+            
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
@@ -91,14 +78,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
               <a href="views/estoque/home_estoque.php"> Produtos</a>
             </li>
             <li>
-              <a href="register.html">Produtos Esgotados</a>
-            </li>
-            <li>
-              <a href="forgot-password.html">Produtos com Defeito</a>
-            </li>
-            <li>
-              <a href="blank.html">Categorias</a>
-            </li>
+
           </ul>
         </li>
         <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Menu Levels">

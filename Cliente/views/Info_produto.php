@@ -1,3 +1,23 @@
+<?php
+$showerros = true;
+if($showerros) {
+  ini_set("display_errors", $showerros);
+  error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+}
+
+session_start();
+// Inicia a sessão
+
+session_name(sha1($_SERVER['HTTP_USER_AGENT'].$_SESSION['email']));
+
+if(empty($_SESSION)){
+  ?>
+  <script>
+    document.location.href = '../../auth/login.php';
+  </script>
+  <?php
+}
+ ?>
     <!DOCTYPE html>
     <html lang="pt-br">
 
@@ -60,7 +80,7 @@
                       <div class="row">
                         <div class="col-sm">
                             Valor:
-                            <input class="form-control" id="quantidade"  name="quantidade" type="text" aria-describedby="nameHelp" disabled value=" <?php echo $prod['valor']; ?>">
+                            <input class="form-control" id="quantidade"  name="quantidade" type="text" aria-describedby="nameHelp" disabled value="R$: <?php echo $prod['valor']; ?>">
                         </div>
                         <div class="col-sm">
                             Quantidade Disponivel:
@@ -96,9 +116,9 @@
         <div class="row">
           <div class="col-sm-12"></div>
           <div class="col-sm-4">
-            <a href="Carrinho.php?id=<?php echo $prod['id_product']; ?>">
-              <button type="button" class="btn btn-primary">Continuar</button>
-          </a>
+            <!-- <a href="Carrinho.php?id=<?php echo $prod['id_product']; ?>" id="continuar"> -->
+              <button type="button" class="btn btn-primary" id="continuar">Continuar</button>
+          <!-- </a> -->
           </div>
       </div>
 
@@ -120,3 +140,21 @@ $MenuRodape->Rodape();
 ?>
 
 </body>
+
+<script src="../js/jquery.js"></script>
+<script src="../js/sweetalert.js"></script>
+<script src="..js/toastr.min.js"></script>
+
+<script type="text/javascript">
+
+
+$(document).ready(function(e) {
+  $('#continuar').click(function(e) {
+
+    alert("ok");
+    var email = $('#email').val();
+    var senha = $('#senha').val();
+
+  });
+});
+</script>
