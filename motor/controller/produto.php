@@ -12,8 +12,14 @@
 	$quantidade = $_REQUEST['quantidade'];
 	$descricao = $_REQUEST['descricao'];
 	$tema = $_REQUEST['tema'];
+
 	// $imagem = $_FILES['imagem_produto'];
-	
+  
+   if ($_REQUEST['imagem']){
+    
+       $imagem= $_REQUEST['imagem'];
+   } else{
+
 
  if(isset($_FILES["imagem"])){
      $arquivo = $_FILES["imagem"];
@@ -31,7 +37,7 @@
   //pegando o caminho para salvar no banco
    $imagem=  $arquivo_nome;
   
-
+}
 	//parte2
 	$action = $_REQUEST['action'];
 	

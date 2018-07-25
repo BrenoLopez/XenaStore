@@ -113,6 +113,14 @@ if(empty($_SESSION)){
                 <input type="hidden" name="id_user" id="id_user" value="<?php echo $_SESSION['id_user'] ?>">
                 <input type="hidden" name="id_produto" id="id_produto" value="<?php  echo $_GET['id']?>">
 
+                <input type="hidden" name="name_product" id="name_product" value="<?php echo $prod['name_product']?>">
+                <input type="hidden" name="valor" id="valor" value="<?php echo $prod['valor']?>">
+                <input type="hidden" name="category" id="category" value="<?php echo $prod['category']?>">
+                <input type="hidden" name="quantidade" id="quantidade" value="<?php echo $prod['quantidade']?>">
+                <input type="hidden" name="descricao" id="descricao" value="<?php echo $prod['descricao']?>">
+                <input type="hidden" name="imagem" id="imagem" value="<?php echo $prod['imagem']?>">
+                <input type="hidden" name="tema" id="tema" value="<?php echo $prod['tema']?>">
+
               </div>
             </div>
           </div>
@@ -161,7 +169,8 @@ $MenuRodape->Rodape();
 
   $(document).ready(function(e) {
     $('#continuar').click(function(e) {
-
+      
+      //vaeriaves da tabela pedido 
       var quantidade = $('#quantidade').val();
       var quant_disponivel = $('#quant_disponivel').val();
       var tamanho = $('#tamanho').val();
@@ -169,20 +178,29 @@ $MenuRodape->Rodape();
       var data_pedido = $('#data_pedido').val();
       var id_user = $('#id_user').val();
       var id_produto = $('#id_produto').val();
-      var  valor_total =quantidade*valor
+      var  valor_total =quantidade*valor;
+
+      //variaveis do produto para atualizar a quantidade desse produto;
   
-   alert()
+      var name_product = $('#name_product').val();
+      var valor = $('#valor').val();
+      var category = $('#category').val();
+      var descricao = $('#descricao').val();
+      var imagem = $('#imagem').val();
+      var tema = $('#tema').val();
+     
+    
+      alert(imagem);
 
       if(!quantidade || !tamanho ){
        swal("Atenção!", "Todos os campos devem ser preenchidos!", "info");
      }else if(  parseInt(quantidade) > parseInt(quant_disponivel)) {
        swal("Atenção!", "Quantidade de Produto Inssuficiente!", "info");
      }else{
+         var quant_aux= quant_disponivel - quantidade;
 
-        
-
-       $.ajax({
-         url: '../../engine/controllers/livros.php',
+        $.ajax({
+         url: '../../motor/controller/pedido.php',
          data: {
 
           id_user : id_user,
@@ -192,21 +210,41 @@ $MenuRodape->Rodape();
           quantidade : quantidade,
           valor_total :valor_total,
           tamanho : tamanho,
-          forma_pagamento : -,
+          forma_pagamento : '-',
 
           action: 'create'
+        },
+
+        type: 'POST'
+      });
+
+       $.ajax({
+         url: '../../motor/controller/produto.php',
+         data: {
+
+          id_product : id_produto,
+          name_product : name_product,
+          valor : valor,
+          category : category,
+          quantidade : quant_aux,
+          descricao : descricao,
+          imagem : imagem,
+          tema : tema,
+
+          action: 'update'
         },
 
         success: function(data) {
           console.log(data);
 
-          if(data === 'true'){
-            swal("Sucesso", "Livro  Cadastrado!", "success");
 
+// não ta retornando true pois não estou passando o id do pedido pois e auto-increment
+          if(data !='true'){
             setTimeout(function(){
-             window.location = '../../Cliente/views/Carrinho.php';
-           }, 2000);
+             window.location = 'Carrinho.php?id='+id_produto;
+           },100);
           }else{
+
             swal("Atenção", "Erro ao conectar com banco de dados. Aguarde e tente novamente em alguns instantes.", "error");
           }
         },

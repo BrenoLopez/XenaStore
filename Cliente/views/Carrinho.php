@@ -47,16 +47,25 @@ require_once '../../motor/requeridos.php';
 $MenuRodape  = new MenuRodape();
 $MenuRodape->setCamisas("active");
 $MenuRodape->menu();
+
+
+// $ped= new Pedido();
+// // $ped= $ped->readPendente(['$_GET']);
+
 ?>
+
+<br><br><br><br>
 <div class="row justify-content-between">
     <div class="col-4">
-<h1>Produtos:</h1>
+<h1>Produtos</h1>
     </div>
     <div class="col-4">
-        <h1>Entrega:</h1>
+        <h1>Entrega</h1>
     </div>
 
 </div>
+
+
 <div class="row">
 
     <div class="table-responsive col-md-8">
@@ -75,7 +84,7 @@ $MenuRodape->menu();
             <tbody>
 
             <tr>
-                <td><img src="../img-fixa/camisas/camisa.jpg" height="100px" width="100px"></td>
+                <td><img src="" height="100px" width="100px"></td>
                 <td>Jes</td>
                 <td>Lorem ipsum dolor sit amet, consectetur adipiscing</td>
                 <td>P</td>

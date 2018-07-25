@@ -64,7 +64,7 @@ Class MenuRodape
                     <button class="btn btn-outline-light ml-2 ">Sair</button>
                 </a>
                 <?php }else { ?>
-                <a href="../../../XenaStore/auth/login.php">
+                <a href="../../auth/login.php">
                     <button class="btn btn-outline-light ml-2 ">Cadastrar/Login</button>
                 </a>
                 <?php } ?>
