@@ -55,7 +55,7 @@ $prod= $prod->ReadProduto('Posters');
                 <div class="card h-100">
                     <h4 class="card-header"> <?php echo $prod['name_product'];?> </h4>
                     <div class="card-body">
-                        <img src="<?php echo $prod['imagem']; ?>" style="margin-left: 100px; max-width: 100px; " >
+                        <img src="<?php echo $prod['imagem']; ?>" style="margin-left: 100px; width: 110px; height: 120px; " >
                         <p class="card-text"> Valor R$: <?php echo $prod['valor'];?> </p>
                     </div>
                     <div class="card-footer">

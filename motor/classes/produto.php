@@ -208,16 +208,14 @@
 				  quantidade = '$this->quantidade',
 				  descricao = '$this->descricao',
 				  imagem = '$this->imagem',
-				  tema = '$this->tema',
+				  tema = '$this->tema'
 				
-				WHERE id_product = '$this->id_product';
+				where id_product = '$this->id_product';
 				
 			";
-		
-			
 			$DB = new DB();
 			$DB->open();
-			$result =$DB->query($sql);
+			$result= $DB->query($sql);
 			$DB->close();
 			return $result;
 		}
@@ -231,7 +229,7 @@
 			$DB = new DB();
 			
 			$DB->open();
-			$result =$DB->query($sql);
+			$result = $DB->query($sql);
 			$DB->close();
 			return $result;
 		}

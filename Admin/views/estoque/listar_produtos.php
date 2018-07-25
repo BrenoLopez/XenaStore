@@ -213,14 +213,14 @@ $_SESSION['LAST_ACTIVITY'] = time();
 
                                                          
 															<td class="text-center  ">
-																<a href="editar_product.php?id=<?php echo $prod['id_product']; ?>" style="color: inherit;">
+																<a href="editar_product.php?id=<?php echo $prod['id_product'];?>" style="color: inherit;">
 																	<div style="height:100%; width:100%;">
 																		<span class="fa fa-edit" aria-hidden="true"></span>
 																	</div>
 																</a>
 															</td>
 															<td class="text-center" id="excluir">
-																<a href="#" style="color: inherit;" >
+																<a href="../../../motor/controller/produto.php?id_product=<?=$prod['id_product'];?>&action=<?='delete'?>" style="color: inherit;" >
 																	<div style="height:100%; width:100%;">
 																		<span class="fa fa-close" aria-hidden="true"></span>
 																	</div>

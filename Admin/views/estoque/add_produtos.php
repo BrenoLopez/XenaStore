@@ -187,11 +187,11 @@ $_SESSION['LAST_ACTIVITY'] = time();
               <div class="form-row">
                 <div class="col-md-6">
                   <label for="exampleInputName">Quantidade</label>
-                  <input class="form-control" id="quantidade"  name="quantidade" type="number" aria-describedby="nameHelp" placeholder="Nome do Produto">
+                  <input class="form-control" id="quantidade"  name="quantidade" type="number" aria-describedby="nameHelp" placeholder="Quantidade">
                 </div>
                 <div class="col-md-6">
                   <label for="exampleInputLastName">Valor</label>
-                  <input class="form-control" id="valor" name="valor" type="number" aria-describedby="nameHelp" placeholder="Categoria">
+                  <input class="form-control" id="valor" name="valor" type="number" aria-describedby="nameHelp" placeholder="Valor">
                 </div>
               </div>
               <br>
@@ -199,7 +199,7 @@ $_SESSION['LAST_ACTIVITY'] = time();
                 <div class="form-row">
                   <div class="col-md-6">
                     <label for="exampleInputName">Descrição</label>
-                    <input class="form-control" id="descricao" name="descricao" type="text" aria-describedby="nameHelp" placeholder="descricao">
+                    <input class="form-control" id="descricao" name="descricao" type="text" aria-describedby="nameHelp" placeholder="Descrição">
                   </div>
                   <div class="col-md-6">
                     <label for="exampleInputLastName">Imagem Do Produto</label>
