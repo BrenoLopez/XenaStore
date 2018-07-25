@@ -18,7 +18,7 @@
 		//setters
 		
 		//Funcao que seta uma instancia da classe
-		public function SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem, $tema,$itemBuscado) {
+		public function SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem, $tema) {
 			$this->id_product = $id_product;
 			$this->name_product = $name_product;
 			$this->valor = $valor;
