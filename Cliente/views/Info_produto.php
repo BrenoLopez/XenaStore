@@ -190,7 +190,6 @@ $MenuRodape->Rodape();
       var tema = $('#tema').val();
      
     
-      alert(imagem);
 
       if(!quantidade || !tamanho ){
        swal("Atenção!", "Todos os campos devem ser preenchidos!", "info");

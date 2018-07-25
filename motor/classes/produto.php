@@ -13,12 +13,11 @@
 		private $descricao;
 		private $imagem;
 		private $tema;
-		private $itemBuscado;
 
 		//setters
 		
 		//Funcao que seta uma instancia da classe
-		public function SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem, $tema,$itemBuscado) {
+		public function SetValues($id_product, $name_product, $valor, $category, $quantidade, $descricao, $imagem, $tema ) {
 			$this->id_product = $id_product;
 			$this->name_product = $name_product;
 			$this->valor = $valor;
@@ -27,7 +26,6 @@
 			$this->descricao = $descricao;
 			$this->imagem = $imagem;
 			$this->tema = $tema;
-			$this->itemBuscado;
 		}
 		
 		

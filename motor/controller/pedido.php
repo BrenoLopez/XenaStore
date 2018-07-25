@@ -4,7 +4,7 @@
 	
 
 	//parte1
-	$id_pedido = $_POST['id_pedido'];
+	$id_pedido = $_REQUEST['id_pedido'];
 	$id_user = $_POST['id_user'];
 	$id_produto = $_POST['id_produto'];
 	$situacao = $_POST['situacao'];
@@ -16,7 +16,9 @@
 	
 	
 	//parte2
-	$action = $_POST['action'];
+
+    
+	$action = $_REQUEST['action'];
 	
 	//parte3
 	$Item = new Pedido();
@@ -70,8 +72,9 @@
 			else {
 				$res = 'false';	
 			}
-			echo $res;
-			
+			// echo $res;
+			header("location: ../../cliente/views/carrinho.php");
+
 		
 		break;	
 		
