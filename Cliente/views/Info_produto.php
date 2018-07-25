@@ -17,118 +17,123 @@ if(empty($_SESSION)){
   </script>
   <?php
 }
- ?>
-    <!DOCTYPE html>
-    <html lang="pt-br">
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
 
-    <head>
+<head>
 
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-        <title>Informações do produto - XenaStore</title>
+  <title>Informações do produto - XenaStore</title>
 
-        <!-- Bootstrap core CSS -->
-        <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Custom styles for this template -->
-        <link href="../css/modern-business.css" rel="stylesheet">
-        <link rel="stylesheet" href="../vendor/bootstrap/js/bootstrap.min.js">
-        <link href="../../Cliente/css/Camisas_css.css" rel="stylesheet">
-    </head>
+  <!-- Custom styles for this template -->
+  <link href="../css/modern-business.css" rel="stylesheet">
+  <link rel="stylesheet" href="../vendor/bootstrap/js/bootstrap.min.js">
+  <!-- <link href="../../Cliente/css/Camisas_css.css" rel="stylesheet"> -->
+</head>
 
-    <body>
+<body>
 
-        <?php
-        require_once '../controllers/MenuRodape.php';
-        require_once '../../motor/requeridos.php';
-        $MenuRodape  = new MenuRodape();
-        $MenuRodape->menu();
-        ?>
+  <?php
+  require_once '../controllers/MenuRodape.php';
+  require_once '../../motor/requeridos.php';
+  $MenuRodape  = new MenuRodape();
+  $MenuRodape->menu();
+  ?>
 
-        <?php
+  <?php
   // funÃ§Ã£o que recupera o produto de acordo com sua categoria 
-        $prod= new Produto();
-        $prod= $prod->Read($_GET['id']);
+  $prod= new Produto();
+  $prod= $prod->Read($_GET['id']);
 
-        ?>
+  ?>
+  <br>
+  <div class="container" >
+    <h1 class="my-4">Informações do produto</h1>
+    <!-- Lista de alguns produtos randomicos do banco de dados -->
+    <div class="row">
+      <div class="col-12">
+        <div class="row">
 
-        <div class="container" >
-            <h1 class="my-4">Informações do produto</h1>
-            <!-- Lista de alguns produtos randomicos do banco de dados -->
-            <div class="row">
-                <div class="col-12">
-                    <div class="row">
+         <div class="col-lg-6 mb-5">
+          <div class="card h-100">
+            <h4 class="card-header "><?php echo $prod['name_product']; ?></h4>
+            <div class="card-body">
+              <img   style="width: 300px; height: 300px; margin-left: 90px; " src="<?php echo $prod['imagem']; ?>" >
 
-                     <div class="col-lg-6 mb-5">
-                      <div class="card h-100">
-                        <h4 class="card-header "><?php echo $prod['name_product']; ?></h4>
-                        <div class="card-body">
-                          <img   style="width: 300px; height: 300px; margin-left: 90px; " src="<?php echo $prod['imagem']; ?>" >
+            </div>
+          </div>
+        </div>
 
-                      </div>
-                  </div>
-              </div>
-
-              <div class="col-lg-6 mb-5">
-                  <div class="card h-100">
-                    <h4 class="card-header ">Descrição</h4>
-                    <p> <?php echo $prod['name_product']; ?></p>
-                    <div class="container">
-                      <div class="row">
-                        <div class="col-sm">
-                            Valor:
-                            <input class="form-control" id="quantidade"  name="quantidade" type="text" aria-describedby="nameHelp" disabled value="R$: <?php echo $prod['valor']; ?>">
-                        </div>
-                        <div class="col-sm">
-                            Quantidade Disponivel:
-                             <input class="form-control" id="quantidade"  name="quantidade" type="text" aria-describedby="nameHelp" disabled value=" <?php echo $prod['quantidade']; ?>">
-                      </div>
-                  </div>
-                  <hr>
-                  <div class="row">
-                    <div class="col-sm">
-                        <div class="col-md-8">
-                           <div class="form-group">
-                            <label for="exampleFormControlSelect1">Tamanho</label>
-                              <select class="form-control" id="category" name="category">
-                                <option value="null"> Selecione</option>
-                                <option value="P">P</option>
-                                <option value="M">M</option>
-                                <option value="G">G</option>
-                                <option value="GG">GG</option>
-                            </select>
-                        </div>
-                    </div>
+        <div class="col-lg-6 mb-5">
+          <div class="card h-100">
+            <h4 class="card-header ">Descrição</h4>
+            <p> <?php echo $prod['name_product']; ?></p>
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                  Valor:
+                  <input class="form-control" id="valor"  name="valor" type="text" aria-describedby="nameHelp" disabled value="<?php echo $prod['valor']; ?>">
                 </div>
                 <div class="col-sm">
-                  <div class="col-md-12">
-                      <label for="exampleInputName">Quantidade</label>
-                      <input class="form-control" id="quantidade"  name="quantidade" type="number" aria-describedby="nameHelp">
-                    </div>
+                  Quantidade Disponivel:
+                  <input class="form-control" id="quant_disponivel"  name="quant_disponivel" type="text" aria-describedby="nameHelp" disabled value=" <?php echo $prod['quantidade']; ?>">
+                </div>
               </div>
-          </div>
-      </div>
-      <div class="card-body">
+              <hr>
+              <div class="row">
+                <div class="col-sm">
+                  <div class="col-md-8">
+                   <div class="form-group">
+                    <label for="exampleFormControlSelect1">Tamanho</label>
+                    <select class="form-control" id="tamanho" name="tamanho">
+                      <option value="null"> Selecione</option>
+                      <option value="P">P</option>
+                      <option value="M">M</option>
+                      <option value="G">G</option>
+                      <option value="GG">GG</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm">
+                <div class="col-md-12">
+                  <label for="exampleInputName">Quantidade</label>
+                  <input class="form-control" id="quantidade"  name="quantidade" type="number" aria-describedby="nameHelp">
+                </div>
 
-        <div class="row">
-          <div class="col-sm-12"></div>
-          <div class="col-sm-4">
-            <!-- <a href="Carrinho.php?id=<?php echo $prod['id_product']; ?>" id="continuar"> -->
-              <button type="button" class="btn btn-primary" id="continuar">Continuar</button>
-          <!-- </a> -->
-          </div>
-      </div>
+                <input type="hidden" name="data_pedido" id="data_pedido" value="<?php echo date('d/m/Y') ?>">
+                <input type="hidden" name="id_user" id="id_user" value="<?php echo $_SESSION['id_user'] ?>">
+                <input type="hidden" name="id_produto" id="id_produto" value="<?php  echo $_GET['id']?>">
 
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+
+            <div class="row">
+              <div class="col-sm-12"></div>
+              <div class="col-sm-4">
+                <!-- <a href="Carrinho.php?id=<?php echo $prod['id_product']; ?>" id="continuar"> -->
+                  <button type="button" class="btn btn-primary" id="continuar">Continuar</button>
+                  <!-- </a> -->
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
-</div>
-</div>
-
-</div>
-</div>
-</div>
 </div>
 
 
@@ -148,13 +153,63 @@ $MenuRodape->Rodape();
 <script type="text/javascript">
 
 
-$(document).ready(function(e) {
-  $('#continuar').click(function(e) {
+  $(document).ready(function(e) {
+    $('#continuar').click(function(e) {
 
-    alert("ok");
-    var email = $('#email').val();
-    var senha = $('#senha').val();
+      var quantidade = $('#quantidade').val();
+      var quant_disponivel = $('#quant_disponivel').val();
+      var tamanho = $('#tamanho').val();
+      var valor = $('#valor').val();
+      var data_pedido = $('#data_pedido').val();
+      var id_user = $('#id_user').val();
+      var id_produto = $('#id_produto').val();
+      var  valor_total =quantidade*valor
+  
+   alert()
 
+      if(!quantidade || !tamanho ){
+       swal("Atenção!", "Todos os campos devem ser preenchidos!", "info");
+     }else if(  parseInt(quantidade) > parseInt(quant_disponivel)) {
+       swal("Atenção!", "Quantidade de Produto Inssuficiente!", "info");
+     }else{
+
+        
+
+       $.ajax({
+         url: '../../engine/controllers/livros.php',
+         data: {
+
+          id_user : id_user,
+          id_produto: id_produto,
+          situacao: 0,
+          data_pedido: data_pedido,
+          quantidade : quantidade,
+          valor_total :valor_total,
+          tamanho : tamanho,
+          forma_pagamento : -,
+
+          action: 'create'
+        },
+
+        success: function(data) {
+          console.log(data);
+
+          if(data === 'true'){
+            swal("Sucesso", "Livro  Cadastrado!", "success");
+
+            setTimeout(function(){
+             window.location = '../../Cliente/views/Carrinho.php';
+           }, 2000);
+          }else{
+            swal("Atenção", "Erro ao conectar com banco de dados. Aguarde e tente novamente em alguns instantes.", "error");
+          }
+        },
+
+        type: 'POST'
+
+      });
+     }
+
+   });
   });
-});
 </script>
