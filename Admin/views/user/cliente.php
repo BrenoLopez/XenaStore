@@ -153,7 +153,7 @@ if(empty($_SESSION)){
     <div class="row">
       <div class="col-md-1"></div>
        <div class="col-xl-5 col-sm-6 mb-3">
-        <div class="card text-white bg-warning o-hidden h-100">
+        <div class="card text-white bg-warning o-hidden h-60">
            <a class="card-footer text-white clearfix small z-1" href="listar_cli.php">
           <div class="card-body">
             <div class="card-body-icon">
