@@ -8,8 +8,8 @@
 
 </head>
 </head>
-<body>
-<div class="modal-dialog">
+<body style="background-image: url('../Cliente/img-fixa/background.jpg');background-repeat: no-repeat;background-position: center;">
+<div class="modal-dialog" style="opacity: 0.92;">
   <br><br><br><br>
   <div class="modal-content login-box ">
     <div class="modal-header">
