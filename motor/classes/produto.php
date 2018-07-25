@@ -13,7 +13,7 @@
 		private $descricao;
 		private $imagem;
 		private $tema;
-		private $itemBuscado;
+
 
 		//setters
 		
@@ -27,7 +27,6 @@
 			$this->descricao = $descricao;
 			$this->imagem = $imagem;
 			$this->tema = $tema;
-			$this->itemBuscado;
 		}
 		
 		
@@ -234,17 +233,7 @@
 			return $result;
 		}
 
-		//função para buscar no banco
-		public function buscaProd(){
 
-			$sql = "select * from produto where category = '$this->category' and like name_product = '%$this->itemBuscado%'";
-            $DB = new DB();
-            $DB->open();
-            $result = $DB->query($sql);
-            $DB->close();
-            return $result;
-
-		}
 		
 		/*
 			--------------------------------------------------

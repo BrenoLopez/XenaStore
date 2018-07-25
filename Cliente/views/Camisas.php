@@ -17,6 +17,8 @@
         <link href="../css/modern-business.css" rel="stylesheet">
         <link rel="stylesheet" href="../vendor/bootstrap/js/bootstrap.min.js">
         <link href="../../Cliente/css/Camisas_css.css" rel="stylesheet">
+        <script type="text/javascript" src="../vendor/jquery/jquery.js"></script>
+        <script type="text/javascript" src="../js/"></script>
     </head>
 
     <body>

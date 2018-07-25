@@ -50,7 +50,7 @@ Class MenuRodape
 
                 </ul>
 
-                <form class="form-inline my-2 my-lg-0 ml-2" method="post">
+                <form class="form-inline my-2 my-lg-0 ml-2" method="post" action="">
                     <input class="form-control mr-sm-2" type="search" placeholder="Faça sua busca aqui">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>

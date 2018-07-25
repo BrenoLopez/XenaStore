@@ -25,20 +25,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="login.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/auth/login.php">
+      <file leaf-file-name="Camisas.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Cliente/views/Camisas.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-              <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -75,8 +78,6 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/Admin/index.php" />
         <option value="$PROJECT_DIR$/Cliente/views/index.php" />
-        <option value="$PROJECT_DIR$/Cliente/views/Acessorios.php" />
-        <option value="$PROJECT_DIR$/Cliente/views/Camisas.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Canecas.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Moletons.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Posters.php" />
@@ -84,14 +85,19 @@
         <option value="$PROJECT_DIR$/Admin/views/estoque/listar_produtos.php" />
         <option value="$PROJECT_DIR$/Admin/views/estoque/editar_product.php" />
         <option value="$PROJECT_DIR$/motor/controller/produto.php" />
-        <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
-        <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
         <option value="$PROJECT_DIR$/motor/BD/conexao/bd.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Info_produto.php" />
         <option value="$PROJECT_DIR$/Cliente/views/Carrinho.php" />
         <option value="$PROJECT_DIR$/Cliente/views/forma_pagamento.php" />
-        <option value="$PROJECT_DIR$/motor/classes/produto.php" />
         <option value="$PROJECT_DIR$/auth/login.php" />
+        <option value="$PROJECT_DIR$/Cliente/views/Acessorios.php" />
+        <option value="$PROJECT_DIR$/Cliente/views/Camisas.php" />
+        <option value="$PROJECT_DIR$/motor/classes/produto.php" />
+        <option value="$PROJECT_DIR$/Cliente/controllers/ControllerFuncoes.php" />
+        <option value="$PROJECT_DIR$/Cliente/views/Busca.php" />
+        <option value="$PROJECT_DIR$/Cliente/js/Busca.js" />
+        <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
+        <option value="$PROJECT_DIR$/Cliente/controllers/MenuRodape.php" />
       </list>
     </option>
   </component>
@@ -113,9 +119,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="144" />
-    <option name="width" value="1356" />
-    <option name="height" value="367" />
+    <option name="x" value="-7" />
+    <option name="y" value="2" />
+    <option name="width" value="1378" />
+    <option name="height" value="733" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -143,12 +150,18 @@
               <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
               <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
               <item name="Cliente" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
               <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
               <item name="motor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="XenaStore" type="b2602c69:ProjectViewProjectNode" />
+              <item name="XenaStore" type="462c0819:PsiDirectoryNode" />
+              <item name="motor" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -205,12 +218,12 @@
       <workItem from="1532454429982" duration="8911000" />
       <workItem from="1532467663234" duration="654000" />
       <workItem from="1532480569297" duration="9116000" />
-      <workItem from="1532518533847" duration="8490000" />
+      <workItem from="1532518533847" duration="11439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60243000" />
+    <option name="totallyTimeSpent" value="63192000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -251,34 +264,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Cliente/controllers/MenuRodape.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="79" selection-start-line="16" selection-start-column="79" selection-end-line="16" selection-end-column="79" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/Camisas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="78" lean-forward="true" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/controllers/MenuRodape.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/views/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -345,13 +330,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/controllers/BarraLateral.php" />
-    <entry file="file://$PROJECT_DIR$/Cliente/controllers/Slides.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -361,13 +339,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/contact.html">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/Acessorios.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="58" column="86" selection-start-line="58" selection-start-column="86" selection-end-line="58" selection-end-column="86" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Cliente/views/Posters.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -392,20 +363,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="57" column="125" selection-start-line="57" selection-start-column="125" selection-end-line="57" selection-end-column="125" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/Camisas.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="57" column="129" selection-start-line="57" selection-start-column="129" selection-end-line="57" selection-end-column="129" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/views/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="54" column="115" lean-forward="true" selection-start-line="54" selection-start-column="14" selection-end-line="54" selection-end-column="115" />
         </state>
       </provider>
     </entry>
@@ -453,13 +410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Cliente/controllers/MenuRodape.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="24" column="49" selection-start-line="24" selection-start-column="49" selection-end-line="24" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Admin/views/estoque/editar_product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -477,20 +427,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="195" column="107" selection-start-line="195" selection-start-column="107" selection-end-line="195" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motor/classes/produto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1584">
-          <caret line="239" column="69" selection-start-line="239" selection-start-column="68" selection-end-line="239" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/motor/controller/produto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1258">
-          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -539,14 +475,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/views/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motor/controller/produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1091">
+          <caret line="80" column="11" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/views/Acessorios.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/auth/login.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="-932">
           <caret line="25" column="11" lean-forward="true" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
           <folding>
             <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/js/Busca.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/js/contact_me.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#76#83#1" expanded="true" />
+            <element signature="e#76#83#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/controllers/ControllerFuncoes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/views/Busca.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="22" lean-forward="true" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/controllers/Slides.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motor/classes/produto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3383">
+          <caret line="14" column="22" lean-forward="true" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/controllers/MenuRodape.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="103" selection-start-line="53" selection-start-column="103" selection-end-line="53" selection-end-column="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Cliente/views/Camisas.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="44" lean-forward="true" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
         </state>
       </provider>
     </entry>
