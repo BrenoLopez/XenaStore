@@ -130,7 +130,7 @@
 		
 		
 		//Funcao que retorna um vetor com todos as instancias da classe no BD
-		public function ReadAll() {
+		public function ReadFunc() {
 			$sql = "
 				SELECT
 					    t1.id_user,
@@ -149,7 +149,54 @@
 						t1.numero
 				FROM
 					user AS t1
+				WHERE 
+					t1.tipo='1';
+
+			";
+			
+			
+			$DB = new DB();
+			$DB->open();
+			$Data = $DB->fetchData($sql);
+			$realData;
+			if($Data ==NULL){
+				$realData = $Data;
+			}
+			else{
 				
+				foreach($Data as $itemData){
+					if(is_bool($itemData)) continue;
+					else{
+						$realData[] = $itemData;	
+					}
+				}
+			}
+			$DB->close();
+			return $realData; 
+		}
+
+		//Funcao que retorna um vetor com todos as instancias da classe no BD
+		public function ReadCli() {
+			$sql = "
+				SELECT
+					    t1.id_user,
+						t1.first_name,
+						t1.last_name,
+						t1.telefone,
+						t1.email,
+						t1.cpf,
+						t1.password,
+						t1.estado,
+						t1.cidade,
+						t1.endereco,
+						t1.cep,
+						t1.tipo,
+						t1.bairro,
+						t1.numero
+				FROM
+					user AS t1
+				WHERE 
+					t1.tipo='0';
 
 			";
 			
