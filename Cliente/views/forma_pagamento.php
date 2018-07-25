@@ -1,3 +1,23 @@
+<?php
+$showerros = true;
+if($showerros) {
+  ini_set("display_errors", $showerros);
+  error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+}
+
+session_start();
+// Inicia a sessão
+
+session_name(sha1($_SERVER['HTTP_USER_AGENT'].$_SESSION['email']));
+
+if(empty($_SESSION)){
+  ?>
+  <script>
+    document.location.href = '../../auth/login.php';
+  </script>
+  <?php
+}
+ ?>
     <!DOCTYPE html>
     <html lang="pt-br">
 

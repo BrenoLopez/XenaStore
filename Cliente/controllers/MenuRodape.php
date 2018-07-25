@@ -1,4 +1,13 @@
 <?php
+$showerros = true;
+if($showerros) {
+  ini_set("display_errors", $showerros);
+  error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+}
+
+session_start();
+// Inicia a sessão
+
 Class MenuRodape
 {
 
@@ -45,14 +54,20 @@ Class MenuRodape
                     <input class="form-control mr-sm-2" type="search" placeholder="Faça sua busca aqui">
                     <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Buscar</button>
                 </form>
-
-
-                <a href="../../XenaStore/auth/login.php">
-                    <button class="btn btn-outline-light ml-2 ">Cadastrar/Login</button>
-                </a>
+                
                 <a href="../views/Carrinho.php">
                     <button class="btn btn-outline-light ml-2 ">Carrinho</button>
                 </a>
+                <?php  if(!empty($_SESSION)){   //se tiver sessão
+
+                 ?><a href="../../motor/controller/logout_cliente.php">
+                    <button class="btn btn-outline-light ml-2 ">Sair</button>
+                </a>
+                <?php }else { ?>
+                <a href="../../../XenaStore/auth/login.php">
+                    <button class="btn btn-outline-light ml-2 ">Cadastrar/Login</button>
+                </a>
+                <?php } ?>
 
             </div>
         </nav>

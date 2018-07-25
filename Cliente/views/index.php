@@ -1,3 +1,20 @@
+
+<?php
+$showerros = true;
+if($showerros) {
+  ini_set("display_errors", $showerros);
+  error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+}
+
+session_start();
+// Inicia a sessão
+
+
+
+if(!empty($_SESSION)){   //se tiver sessão
+  
+}
+ ?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -31,13 +48,11 @@ $slides->setImg2('../img-fixa/canecas/caneca1.jpg');
 $slides->setImg3('../img-fixa/moletons/moletons3.jpg');
 $slides->codSlide();
 
-?>
 
-    <?php
-  // funÃ§Ã£o que recupera o produto de acordo com sua categoria 
    $prod= new Produto();
    $prod= $prod->ReadProduto('Camisa');
 ?>
+
     <!-- Page Content -->
     <div class="container">
       <h1 class="my-4">Produtos em Destaque</h1>
@@ -70,7 +85,6 @@ $slides->codSlide();
 <?php
 $MenuRodape->Rodape();
 ?>
-
 
   </body>
 

@@ -9,29 +9,38 @@
 		private $id_user;
 		private $first_name;
 		private $last_name;
-		private $email;
-		private $password;
-		private $cpf;
-		private $endereco;
 		private $telefone;
+		private $email;
+		private $cpf;
+		private $password;
+		private $estado;
+		private $cidade;
+		private $endereco;
 		private $cep;
 		private $tipo;
-				
+		private $bairro;
+		private $numero;
+
 
 		//setters
 		
 		//Funcao que seta uma instancia da classe
-		public function SetValues($id_user, $first_name, $last_name, $email, $password, $cpf, $endereco, $telefone, $cep, $tipo) { 
-			$this->id_user = $id_user;
-			$this->first_name = $first_name;
-			$this->last_name = $last_name;
-			$this->email = $email;
-			$this->password = $password;
-			$this->cpf = $cpf;
-			$this->endereco = $endereco;
-			$this->telefone = $telefone;
-			$this->cep = $cep;
-			$this->tipo = $tipo;
+		public function SetValues($id_user, $first_name, $last_name, $telefone, $email, $cpf, $password, $estado, $cidade, $endereco, $cep, $tipo, $bairro, $numero) { 
+			
+			$this->id_user= $id_user;
+			$this->first_name= $first_name;
+			$this->last_name= $last_name;
+			$this->telefone= $telefone;
+			$this->email= $email;
+			$this->cpf= $cpf;
+			$this->password= $password;
+			$this->estado= $estado;
+			$this->cidade= $cidade;
+			$this->endereco= $endereco;
+			$this->cep= $cep;
+			$this->tipo= $tipo;
+			$this->bairro= $bairro;
+			$this->numero= $numero;
 						
 		}
 		
@@ -44,29 +53,37 @@
 			$sql = "
 				INSERT INTO user 
 						  (
-				 			id_user,
-				 			first_name,
-				 			last_name,
-				 			email,
-				 			password,
-				 			cpf,
-				 			endereco,
-				 			telefone,
-				 			cep,
-				 			tipo
+				 		id_user,
+						first_name,
+						last_name,
+						telefone,
+						email,
+						cpf,
+						password,
+						estado,
+						cidade,
+						endereco,
+						cep,
+						tipo,
+						bairro,
+						numero
 						  )  
 				VALUES 
 					(
-				 			'$this->id_user',
-				 			'$this->first_name',
-				 			'$this->last_name',
-				 			'$this->email',
-				 			'$this->password',
-				 			'$this->cpf',
-				 			'$this->endereco',
-				 			'$this->telefone',
-				 			'$this->cep',
-				 			'$this->tipo'
+				 	        '$this->id_user',
+                            '$this->first_name',
+                            '$this->last_name',
+                            '$this->telefone',
+                            '$this->email',
+                            '$this->cpf',
+                            '$this->password',
+                            '$this->estado',
+                            '$this->cidade',
+                            '$this->endereco',
+                            '$this->cep',
+                            '$this->tipo',
+                            '$this->bairro',
+                            '$this->numero'
 					);
 			";
 			
@@ -81,16 +98,20 @@
 		public function Read($id) {
 			$sql = "
 				SELECT
-					 t1.id_user,
-					 t1.first_name,
-					 t1.last_name,
-					 t1.email,
-					 t1.password,
-					 t1.cpf,
-					 t1.endereco,
-					 t1.telefone,
-					 t1.cep,
-					 t1.tipo
+					    t1.id_user,
+						t1.first_name,
+						t1.last_name,
+						t1.telefone,
+						t1.email,
+						t1.cpf,
+						t1.password,
+						t1.estado,
+						t1.cidade,
+						t1.endereco,
+						t1.cep,
+						t1.tipo,
+						t1.bairro,
+						t1.numero
 				FROM
 					user AS t1
 				WHERE
@@ -112,16 +133,20 @@
 		public function ReadAll() {
 			$sql = "
 				SELECT
-					 t1.id_user,
-					 t1.first_name,
-					 t1.last_name,
-					 t1.email,
-					 t1.password,
-					 t1.cpf,
-					 t1.endereco,
-					 t1.telefone,
-					 t1.cep,
-					 t1.tipo
+					    t1.id_user,
+						t1.first_name,
+						t1.last_name,
+						t1.telefone,
+						t1.email,
+						t1.cpf,
+						t1.password,
+						t1.estado,
+						t1.cidade,
+						t1.endereco,
+						t1.cep,
+						t1.tipo,
+						t1.bairro,
+						t1.numero
 				FROM
 					user AS t1
 				
@@ -172,16 +197,20 @@
 		public function ReadAll_Paginacao($inicio, $registros) {
 			$sql = "
 				SELECT
-					 t1.id_user,
-					 t1.first_name,
-					 t1.last_name,
-					 t1.email,
-					 t1.password,
-					 t1.cpf,
-					 t1.endereco,
-					 t1.telefone,
-					 t1.cep,
-					 t1.tipo
+					    t1.id_user,
+						t1.first_name,
+						t1.last_name,
+						t1.telefone,
+						t1.email,
+						t1.cpf,
+						t1.password,
+						t1.estado,
+						t1.cidade,
+						t1.endereco,
+						t1.cep,
+						t1.tipo,
+						t1.bairro,
+						t1.numero
 				FROM
 					user AS t1
 					
@@ -202,16 +231,22 @@
 		public function Update() {
 			$sql = "
 				UPDATE user SET
-				
-				  first_name = '$this->first_name',
-				  last_name = '$this->last_name',
-				  email = '$this->email',
-				  password = '$this->password',
-				  cpf = '$this->cpf',
-				  endereco = '$this->endereco',
-				  telefone = '$this->telefone',
-				  cep = '$this->cep',
-				  tipo = '$this->tipo'
+				  
+				   id_user= '$this->id_user',
+				   first_name= '$this->first_name',
+				   last_name= '$this->last_name',
+				   telefone= '$this->telefone',
+				   email= '$this->email',
+				   cpf= '$this->cpf',
+				   password= '$this->password',
+				   estado= '$this->estado',
+				   cidade= '$this->cidade',
+				   endereco= '$this->endereco',
+				   cep= '$this->cep',
+				   tipo= '$this->tipo',
+				   bairro= '$this->bairro',
+				   numero= '$this->numero'
+
 				
 				WHERE id_user = '$this->id_user';
 				
