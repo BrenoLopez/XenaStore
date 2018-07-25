@@ -23,7 +23,7 @@ Class MenuRodape
         ?>
         <!-- Barra de navegação colocar como metodo de classe php-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-            <a class="navbar-brand " href="../views/index.php"><img src="../img-fixa/logo.jpeg" width="120px" height="75px" style="margin-top:  5px"></a>
+            <a class="navbar-brand " href="../views/index.php"><img src="../img-fixa/logo.png" width="200px" height="80px" style="margin-top:  5px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
                     aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>

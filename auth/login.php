@@ -5,9 +5,9 @@
 <link href="../Cliente/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
 <!-- Custom fonts for this template-->
 <link href="../Admin/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="../cliente/img-fixa/favicon.ico">
+</head>
 
-</head>
-</head>
 <body style="background-image: url('../Cliente/img-fixa/background.jpg');background-repeat: no-repeat;background-position: center;">
 <div class="modal-dialog" style="opacity: 0.92;">
   <br><br><br><br>

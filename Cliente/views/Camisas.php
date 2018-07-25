@@ -17,6 +17,7 @@
         <link href="../css/modern-business.css" rel="stylesheet">
         <link rel="stylesheet" href="../vendor/bootstrap/js/bootstrap.min.js">
         <link href="../../Cliente/css/Camisas_css.css" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="../img-fixa/favicon.ico">
     </head>
 
     <body>
@@ -30,7 +31,7 @@
     $MenuRodape  = new MenuRodape();
     $MenuRodape->setCamisas("active");
     $MenuRodape->menu();
-    $slides->setImg1('../img-fixa/camisas/camisa5.jpg');
+    $slides->setImg1('../img-fixa/camisas/camisa1.png');
     $slides->setImg2('../img-fixa/camisas/camisa2.jpg');
     $slides->setImg3('../img-fixa/camisas/camisa3.jpg');
     $slides->codSlide();
@@ -52,11 +53,11 @@
 
                 ?>
                 <div class="col-lg-4 mb-4">
-                    <div class="card h-100">
-                        <h4 class="card-header"> <?php echo $prod['name_product'];?> </h4>
+                    <div class="card h-100 text-center">
+                        <h5 class="card-header"> <?php echo $prod['name_product'];?> </h5>
                         <div class="card-body">
-                            <img src="<?php echo $prod['imagem']; ?>" style="margin-left: 100px; width: 110px; height: 120px; " >
-                            <p class="card-text"> Valor R$: <?php echo $prod['valor'];?> </p>
+                            <img src="<?php echo $prod['imagem']; ?>" style="width: 100%; " >
+                            <p class="card-text"> <strong> Valor R$: <?php echo $prod['valor'];?> </strong> </p>
                         </div>
                         <div class="card-footer">
                             <a href="../views/Info_Produto.php?id=<?php echo $prod['id_product']; ?>" class="btn btn-primary">Adicionar ao Carrinho</a>
