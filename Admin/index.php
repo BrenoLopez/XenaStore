@@ -23,7 +23,6 @@ if (isset($_SESSION['LAST_ACTIVITY']) && (time() - $_SESSION['LAST_ACTIVITY'] > 
 $_SESSION['LAST_ACTIVITY'] = time();
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 

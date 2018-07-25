@@ -4,17 +4,20 @@
 	
 	//parte1
 	
-	$id_user = $_POST['id_user'];
-	$first_name = $_POST['first_name'];
-	$last_name = $_POST['last_name'];
-	$email = $_POST['email'];
-	$password = $_POST['password'];
-	$cpf = $_POST['cpf'];
-	$endereco = $_POST['endereco'];
-	$telefone = $_POST['telefone'];
-	$cep = $_POST['cep'];
-	$tipo = $_POST['tipo'];
-	
+	$id_user = $_REQUEST['id_user'];
+	$first_name = $_REQUEST['first_name'];
+	$last_name = $_REQUEST['last_name'];
+	$telefone = $_REQUEST['telefone'];
+	$email = $_REQUEST['email'];
+	$cpf = $_REQUEST['cpf'];
+	$password = $_REQUEST['password'];
+	$estado= $_REQUEST['estado'];
+    $cidade=$_REQUEST['cidade'];
+	$endereco = $_REQUEST['rua'];
+	$cep = $_REQUEST['cep'];
+	$tipo = $_REQUEST['tipo'];
+    $bairro = $_REQUEST['bairro'];
+    $numero = $_REQUEST['numero'];
 	
 
 	//parte2
@@ -22,10 +25,11 @@
 	
 	//parte3
 	$Item = new User();
-	$Item->SetValues($id_user, $first_name, $last_name, $email, password_hash($password, PASSWORD_DEFAULT), $cpf, $endereco, $telefone, $cep, $tipo); 
+	$Item->SetValues($id_user, $first_name, $last_name, $telefone, $email, $cpf, password_hash($password, PASSWORD_DEFAULT), $estado, $cidade, $endereco, $cep, $tipo, $bairro, $numero); 
 	
 	
 		
+
 	//parte4
 	switch($action) {
 		case 'create':
@@ -39,8 +43,9 @@
 				$res = "false";	
 			}			
 			// echo $res;
+
 			//retornando para pagina apos cadastrar
-			header("location: ../../admin/views/user/func.php");
+			header("location: ../../auth/login.php");
 		break;	
 		
 		case 'update':
