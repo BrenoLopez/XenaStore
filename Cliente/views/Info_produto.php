@@ -46,7 +46,7 @@
                       <div class="card h-100">
                         <h4 class="card-header "><?php echo $prod['name_product']; ?></h4>
                         <div class="card-body">
-                          <img   style="width: 500px; height: 250px " src="<?php echo $prod['imagem']; ?>" >
+                          <img   style="width: 300px; height: 300px; margin-left: 90px; " src="<?php echo $prod['imagem']; ?>" >
 
                       </div>
                   </div>
@@ -114,7 +114,7 @@
 
 <!-- /.container -->
 <?php
-$MenuRodape->setFixo("fixed-bottom");
+//$MenuRodape->setFixo("fixed-bottom");
 $MenuRodape->Rodape();
 
 ?>

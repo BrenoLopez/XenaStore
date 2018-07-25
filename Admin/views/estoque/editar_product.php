@@ -193,7 +193,7 @@
                 </div>
                 <!-- ação a ser executada no controller -->
                 <input type="hidden" name="action" value="update">
-                <input type="hidden" name="id_product" value="<?php echo $_GET['id']; ?>">
+                <input type="hidden" name="id_product" value="<?php echo $_GET['id'];?>">
                 <br>
                 <button  type="submit" class="btn btn-success btn-block" id="cadastrar"> Salvar  </button> 
               </form>
@@ -206,7 +206,7 @@
         <footer class="sticky-footer">
           <div class="container">
             <div class="text-center">
-              <small>Copyright © Your Website 2018</small>
+              <small>Copyright © Xena Store 2018</small>
             </div>
           </div>
         </footer>

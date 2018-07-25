@@ -5,13 +5,13 @@
 
 	//parte1
 	
-	$id_product = $_POST['id_product'];
-	$name_product = $_POST['name_product'];
-	$valor = $_POST['valor'];
-	$category = $_POST['category'];
-	$quantidade = $_POST['quantidade'];
-	$descricao = $_POST['descricao'];
-	$tema = $_POST['tema'];
+	$id_product = $_REQUEST['id_product'];
+	$name_product =$_REQUEST['name_product'];
+	$valor = $_REQUEST['valor'];
+	$category = $_REQUEST['category'];
+	$quantidade = $_REQUEST['quantidade'];
+	$descricao = $_REQUEST['descricao'];
+	$tema = $_REQUEST['tema'];
 	// $imagem = $_FILES['imagem_produto'];
 	
 
@@ -33,7 +33,7 @@
   
 
 	//parte2
-	$action = $_POST['action'];
+	$action = $_REQUEST['action'];
 	
 	//parte3
 	$Item = new Produto();
@@ -72,11 +72,10 @@
 				$res = 'false';	
 			}
 			// echo $res;
-		    header("location: ../../admin/views/estoque/listar_produtos.php");
+		   header("location: ../../admin/views/estoque/listar_produtos.php");
 		break;	
 		
 		case 'delete':
-		
 			
 			
 			$res = $Item->Delete();
@@ -86,12 +85,11 @@
 			else {
 				$res = 'false';	
 			}
-			echo $res;
-			
+			//echo $res;
+
+			header("location: ../../admin/views/estoque/listar_produtos.php");
 		
-		break;	
-		
-		
+		break;
 		
 	}
 ?>

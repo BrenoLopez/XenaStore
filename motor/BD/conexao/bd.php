@@ -37,7 +37,8 @@
         function query($sql) {
             try {
                 //connect as appropriate as above
-                $this->dbi->query($sql); //invalid query!
+                 $this->dbi->query($sql); //invalid query!
+
             } catch(PDOException $ex) {
                 echo "An Error occured! $ex"; //user friendly message
             }
