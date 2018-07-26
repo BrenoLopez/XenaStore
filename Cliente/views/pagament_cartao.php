@@ -56,7 +56,7 @@ if(empty($_SESSION)){
       $prod= $prod->Read($_GET['id']);
 
       ?>
-
+    <br><br>
       <div class="container" >
         <h1 class="my-4">Pagamento com Cartão</h1>
         <!-- Lista de alguns produtos randomicos do banco de dados -->
@@ -102,69 +102,19 @@ if(empty($_SESSION)){
                           <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
                         </div>
                       </div>
+
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-6 mb-5">
-              <div class="card h-100">
-                <h4 class="card-header ">Endereço de Entrega</h4>
-
-                <div class="card-body">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-group">
-                          <label for="formGroupExampleInput">Example label</label>
-                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-group">
-                          <label for="formGroupExampleInput">Example label</label>
-                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col">
-                        <div class="form-group">
-                          <label for="formGroupExampleInput">Example label</label>
-                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-group">
-                          <label for="formGroupExampleInput">Example label</label>
-                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-                        </div>
-                      </div>
-                      <div class="col">
-                        <div class="form-group">
-                          <label for="formGroupExampleInput">Example label</label>
-                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="row">
-
-                    <div class="col-sm-4">
+                  <div class="col-sm-4">
                       <a href="finalizar_compra.php?id=<?php echo $prod['id_product']; ?>">
                         <button type="button" class="btn btn-success">Continuar</button>
                       </a>
                     </div>
-                  </div>
-
                 </div>
               </div>
             </div>
 
-          </div>
-        </div>
+            
       </div>
     </div>
 

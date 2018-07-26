@@ -82,14 +82,14 @@ if(empty($_SESSION)){
 
             <div class="row">
               <div class="col">
-               <span>asasas</span>
+               <span></span>
               </div>
             
               <div class="col">
-                 <span>asasas</span>
+                 <span></span>
               </div>
               <div class="col">
-                 <span>asasas</span>
+                 <span></span>
 
               </div>
             </div>

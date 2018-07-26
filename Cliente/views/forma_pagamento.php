@@ -58,7 +58,7 @@ if(empty($_SESSION)){
       ?>
 
 
-      
+      <br><br>
       <div class="container">
        <h1 class="my-4">Formas de Pagamento</h1>
        <br><br>

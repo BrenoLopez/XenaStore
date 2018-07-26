@@ -124,6 +124,30 @@
 			$DB->close();
 			return $Data; 
 		}
+		  public function ReadPedidos_novos( ) {
+			$sql = "
+				SELECT
+				* FROM
+					pedido AS t1
+				 JOIN produto AS p1
+				ON
+				t1.id_produto = p1.id_product
+				WHERE
+					t1.situacao = '0'
+
+
+
+			";
+			
+			$DB = new DB();
+			$DB->open();
+			$Data = $DB->fetchData($sql);
+			
+			$DB->close();
+			return $Data; 
+		}
+
+
 		
 		//Funcao que retorna um vetor com todos as instancias da classe no BD
 		public function ReadAll() {
