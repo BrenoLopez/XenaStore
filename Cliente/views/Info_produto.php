@@ -95,7 +95,7 @@ if(empty($_SESSION)){
                    <div class="form-group">
                     <label for="exampleFormControlSelect1">Tamanho</label>
                     <select class="form-control" id="tamanho" name="tamanho">
-                      <option value="null"> Selecione</option>
+                      <option value=""> Selecione</option>
                       <option value="P">P</option>
                       <option value="M">M</option>
                       <option value="G">G</option>

@@ -1,8 +1,8 @@
 <?php
 $showerros = true;
 if($showerros) {
-  ini_set("display_errors", $showerros);
-  error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
+	ini_set("display_errors", $showerros);
+	error_reporting(E_ALL ^ E_NOTICE ^ E_STRICT);
 }
 
 session_start();
@@ -11,14 +11,14 @@ session_start();
 session_name(sha1($_SERVER['HTTP_USER_AGENT'].$_SESSION['email']));
 
 if(empty($_SESSION)){
-  ?>
-  <script>
-    document.location.href = '../../../auth/login.php';
-  </script>
-  <?php
+	?>
+	<script>
+		document.location.href = '../../../auth/login.php';
+	</script>
+	<?php
 }
- ?>
- 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,11 +68,11 @@ if(empty($_SESSION)){
 							<a href="listar_pedidos_novos.php">Novos</a>
 						</li>
 						<li>
-              				<a href="listar_pedidos_entregues.php">Entregues</a>
-            			</li>
-            			<li>
-             				 <a href="listar_pedidos_cancelados.php">Cancelados</a>
-            			</li>
+							<a href="listar_pedidos_entregues.php">Entregues</a>
+						</li>
+						<li>
+							<a href="listar_pedidos_cancelados.php">Cancelados</a>
+						</li>
 					</ul>
 				</li>
 				<li class="nav-item" data-toggle="tooltip" data-placement="right" title="Example Pages">
@@ -148,81 +148,65 @@ if(empty($_SESSION)){
 					</div>
 				</div> 
 				<br>
+				<?php
 
-				<?php  
-				$user= new User();
-				$user=$user->ReadAll();
+				$prod= new Produto();
+				$prod= $prod->Read($_GET['id']);
 
-				if(empty($user)) {
-					?>
-
-					<h4 class="well"> Nenhum dado encontrado. </h4>
-					<?php
-				} else {
-
-					?>
-                  <h1> Pedidos Novos </h1>
-                  <br >
-					<div class="content">
-						<div class="container-fluid">
-							<div class="row">
-								<div class="col-md-12">
-									<div class="card">
-										<div class="content table-responsive table-full-width">
-											<table class="table table-hover table-striped">
-												<thead>
-													<th>ID</th>
-													<th>Nome</th>
-													<th>Sobrenome</th>
-													<th>Email</th>
-													<th>Cpf</th>
-													<th class=" text-center">Editar</th>
-													<th class=" text-center">Excluir</th>
-												</thead>
-												<tbody>
-													<?php
-													foreach($user as $user){
-														?>
-														<tr>
-															<td><?php echo $user['id_user'];?></td>
-															<td><?php echo $user['first_name'];?></td>
-															<td><?php echo $user['last_name'];?></td>
-															<td><?php echo $user['email']; ?></td>
-															<td><?php echo $user['cpf']; ?></td>
+				$ped= new Pedido();
+				$ped= $ped->ReadPedidos_novos();
 
 
-															<td class="text-center  ">
-																<a href="editar_func.php?id=<?php echo $user['id_user']; ?>" style="color: inherit;">
-																	<div style="height:100%; width:100%;">
-																		<span class="fa fa-edit" aria-hidden="true"></span>
-																	</div>
-																</a>
-															</td>
-															<td class="text-center">
-																<a  style="color: inherit;" onclick="desativar(<?php echo $user['id_user'];?>)" href="">
-																	<div style="height:100%; width:100%; color: red;">
-																		<span class="fa fa-close" aria-hidden="true"></span>
-																	</div>
-																</a>
-															</td>
+				?>
+				<h1> Pedidos Novos </h1>
+				<br >
+				<div class="content">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card">
+									<div class="content table-responsive table-full-width">
+										<table class="table table-striped" cellspacing="0" cellpadding="0">
+											<thead>
+												<tr>
+													<th>Imagem</th>
+													<th>Produtos</th>
+													<th>Descrição</th>
+													<th>Tamanho</th>
+													<th>Quantidade</th>
+													<th>Valor R$</th>
+													<!-- <th class="actions">Ações</th> -->
+												</tr>
+											</thead>
+											<tbody>
+												<?php  foreach ($ped as $ped2) {
+													?>
+													<tr>
+														<td><img src="../<?php echo $ped2['imagem']; ?>" height="100px" width="100px"></td>
+														<td><?php echo $ped2['category']; ?></td>
+														<td><?php echo $ped2['descricao']; ?></td>
+														<td><?php echo $ped2['tamanho']; ?></td>
+														<td><?php echo $ped2['quantidade']; ?></td>
+														<td><?php echo  $ped2['valor_total']; ?></td>
 
+														<!-- <td class="actions">
+															<a  href="../../motor/controller/pedido.php?id_pedido=<?php echo $ped2['id_pedido'];?>&action=<?='delete'?>" class="btn btn-warning btn-xs" id="remover"  data-toggle="modal" data-target="#delete-modal">Remover
+															</a>
+														</td> -->
 
-														</tr>
-														<?php
-													     }
-													   ?>
-												</tbody>
-											</table>
-										</div>
+													</tr>
+													<?php 
+
+												}
+												?>
+											</tbody>
+										</table>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<?php
-				}
-
-				?>
+				</div>
 				<!-- /.content-wrapper-->
 				<footer class="sticky-footer">
 					<div class="container">
@@ -272,24 +256,3 @@ if(empty($_SESSION)){
 		<!-- Custom scripts for this page-->
 		<!-- <script src="../../js/sb-admin-datatables.min.js"></script> -->
 		<!-- <script src="../../js/sb-admin-charts.min.js"></script> -->
-
-		<script type="text/javascript">
-
-
-         //enviar com post para excluiir o usuario
-		function desativar(id){
-
-				if(confirm("Realmente deseja excluir esse usuário?"))
-				{
-
-					alert("Posso excluir");
-					// window.location= "ativar/"+id;
-
-				}
-				else
-				{
-					alert("Ação cancelada");    
-				}
-			}
-
-		</script>
